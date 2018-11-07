@@ -77,7 +77,7 @@ componentWillMount(){
   firebase.initializeApp(config);
   firebase.database().ref('texto').set(
     {
-      name:'Cristian Ronda',
+      name:'Funciona!',
       edad: 24
     }
   ).then(()=>{
