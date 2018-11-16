@@ -1,12 +1,23 @@
 import React from 'react';
-import {DrawerNavigator} from 'react-navigation';
-import HomeScreen from '../layouts/HomeScreen';
-import SideBar from '../layouts/SideBar';
+import {DrawerNavigator,createMaterialTopTabNavigator} from 'react-navigation';
+import MapScreen from '../layouts/layout_map';
+import SideBar from '../layouts/layout_sideBar';
+import NewsScreen from '../containers/container_news'
+import VideosScreen from '../containers/container_videos' 
+import Player from './player';
+const HomeTab = createMaterialTopTabNavigator(
+  {
+    Player,
+    NewsScreen,
+    VideosScreen,
+    MapScreen, 
+  }
+);
+
 
 const HomeScreenRoute = DrawerNavigator(
   {
-    Home: HomeScreen,
-
+    Home: HomeTab,
   },
   {
     contentComponent: props => <SideBar 

@@ -31,7 +31,7 @@ export default class LoadingConfirmation extends Component {
                 this.setState({ user: user.toJSON() });
                 setTimeout(() => {
                     this.props.navigation.navigate('Home')
-                }, 2000)
+                }, 2)
             } else {
                 // User has been signed out, reset the state
                 this.setState({

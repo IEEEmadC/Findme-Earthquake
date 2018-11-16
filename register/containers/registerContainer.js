@@ -22,8 +22,7 @@ export default class AnatomyExample extends Component {
   onPickerValueChange = (value) => {
     this.setState({
       countryCode: value
-    });
-    
+    }); 
   }
   
   onChangeNumber = (value)=>{
