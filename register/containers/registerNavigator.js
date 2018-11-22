@@ -14,7 +14,13 @@ const AuthStack = createStackNavigator({
     Confirmation
 });
 const AppStack = createStackNavigator({
-  Home
+  Home:{
+    screen:Home,
+    navigationOptions: ()=>({
+      header:null,
+    })
+  },
+  
 })
 
 export default createSwitchNavigator(

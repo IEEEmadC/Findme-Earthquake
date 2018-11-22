@@ -11,7 +11,7 @@ class VideosContainer extends Component {
     constructor(props) {
         super(props);
         arrayvideos = []
-        busqueda = ['https://www.youtube.com/watch?v=2LcEjJwg_9k', 'https://youtu.be/-sl1jyW05Ps']
+        busqueda = ['https://www.youtube.com/watch?v=tpRRGCOb5hQ', 'https://www.youtube.com/watch?v=XnkRA_DnFgY', 'https://www.youtube.com/watch?v=8XRSnYzewes']
         this.options = {
             q: '',
             type: 'video'
@@ -25,7 +25,8 @@ class VideosContainer extends Component {
             this.options.q = query
             searchYoutube('AIzaSyArFvQD6p9fO4egyoDYNMpIkswGGa1whvU', this.options)
                 .then(result => {
-                    arrayvideos.push(result.items[0].snippet)
+                    //arrayvideos.push(result.items[0].snippet)
+                    arrayvideos.push(result.items[0])
                     this.setState(
                         {
                             videos: arrayvideos,
@@ -39,7 +40,8 @@ class VideosContainer extends Component {
 
     onPressCardVideo = (cardVideo)=>{
         console.log(cardVideo);
-        alert("bo00000000000000000");
+        //alert("bo00000000000000000");
+
     }
     
     render() {

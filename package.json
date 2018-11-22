@@ -11,7 +11,9 @@
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4",
     "react-native-firebase": "^5.1.0",
+    "react-native-image-picker": "^0.27.1",
     "react-native-maps": "^0.22.0",
+    "react-native-swipeout": "^2.3.6",
     "react-navigation": "^2.18.2",
     "youtube-api-v3-search": "^1.1.3"
   },

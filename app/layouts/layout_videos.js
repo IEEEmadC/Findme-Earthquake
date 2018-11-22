@@ -1,13 +1,13 @@
 import React from 'react';
 import Videos from '../components/cardvideos'
 import { Container, Content, } from 'native-base';
-
+let id=0
 function LayoutNews(props) {
     return (
         <Container>
             <Content>
                 {
-                    props.videos.map(item => <Videos onPressCard ={props.onPressCardVideo} {...item} />)
+                    props.videos.map(item => <Videos key={id++} onPressCard ={props.onPressCardVideo} {...item} />)
                 }
             </Content>
         </Container>
