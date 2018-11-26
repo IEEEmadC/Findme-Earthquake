@@ -11,12 +11,18 @@ function SideBar(props){
     return(
         <Container>
         <Grid>
-            <Row style={{backgroundColor:'red', height:100 }}>
-                <Thumbnail large source={{uri: "https://cdn4.iconfinder.com/data/icons/43-social-media-line-icons/24/github-512.png"}} />  
+            <Row style={{
+                backgroundColor: '#006680', 
+                height:100,
+                padding:10 
+            }}>
+                <Avatar medium source={ require('../../resources/images/FindMeEarthQuake.png')} ></Avatar>
             </Row>
             <Row>
                 <Content>
-                <Avatar {...props}/>
+                {
+                    //<Avatar  small {...props}/>
+                }
                     <ListItemButton 
                         iconOptions={{ type: 'Entypo', name:'facebook-with-circle' }}
                         description="Sincronizar con Facebook"
