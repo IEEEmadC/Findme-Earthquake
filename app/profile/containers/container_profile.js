@@ -64,7 +64,7 @@ class ProfileComponent extends Component {
     }
     componentWillMount() {
         Contacts.map(item => {
-            console.log(item)
+            // console.log(item)
             arrayContacts.push(item)
             this.setState({
                 contacts: arrayContacts,
