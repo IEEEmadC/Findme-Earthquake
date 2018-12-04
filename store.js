@@ -1,11 +1,6 @@
 import { createStore  } from "redux";
-import reducer from './reducers/articles'
-const store = createStore(reducer,
-    {
-        videos: [],
-        articles:[],
-        pins:[]
-    }
-);
+import reducer from './reducers/index'
+
+const store = createStore(reducer,{});
 
 export default store;

@@ -1,4 +1,10 @@
-function articles(state = {}, action) {
+const initialState ={
+    articles:[],
+}
+
+
+
+function articles(state = initialState, action) {
     switch (action.type) {
         case 'GET_ARTICLES': {
             return { ...state, ...action.payload }

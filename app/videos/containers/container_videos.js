@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 function mapStateToProps(state) {    
     return {
-        list: state.videos
+        list: state.videos.videos
     }
 
 }

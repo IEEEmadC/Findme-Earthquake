@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 function mapStateToProps(state) {
     return {
-        list: state.articles
+        list: state.articles.articles
     }
 }
 class NewsContainer extends Component {

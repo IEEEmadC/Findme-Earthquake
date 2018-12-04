@@ -1,4 +1,10 @@
-function maps(state = {}, action) {
+const initialState ={
+    pins:[]
+}
+
+
+
+function maps(state = initialState, action) {
     switch (action.type) {
         case 'GET_PIN_MAPS': {
             return { ...state, ...action.payload }

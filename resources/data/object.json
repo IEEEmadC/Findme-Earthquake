@@ -1,0 +1,135 @@
+{
+    "articles": [
+        {
+            "type": "article",
+            "title": "Cómo armar un botiquín de primeros auxilios.",
+            "urlToImage": "https://blogs.unitec.mx/hs-fs/hubfs/Blogs_UNITEC/Corp_Samara/armar-un-botiquin-de-primeros-auxilios-1.jpg?t=1543510879561&width=549&name=armar-un-botiquin-de-primeros-auxilios-1.jpg",
+            "content": [
+                {
+                    "type": "text",
+                    "title": "",
+                    "content": "Un botiquín de primeros auxilios es una de esas cosas en las que no tendemos a pensar hasta que las echamos en falta. Es un elemento básico en casa, oficina, escuela o hasta para llevar en el auto. Los accidentes ocurren a pesar de que tratemos de evitarlos y estar preparado para enfrentar la situación puede hacer la diferencia. Por eso te compartimos estas indicaciones de la Cruz Roja para que tu kit esté completo y tengas todo lo necesario para hacer frente a una emergencia."
+                },
+                {
+                    "type": "text",
+                    "title": "",
+                    "content": "Aprende a armar un botiquín de primeros auxilios y lo que requieres para estar preparado en una situación de emergencia."
+                },
+                {
+                    "type": "list",
+                    "title": "",
+                    "content": [
+                        "Procura tener dos kits, uno en casa y otro en tu automóvil; así como saber en dónde hay uno en tu lugar de trabajo.",
+                        "Incluye medicamentos especiales que tú o tus allegados puedan necesitar y números de teléfono para emergencias (como el de tu doctor, el de urgencias o el del hospital).",
+                        "Revisa el kit con cierta regularidad para asegurarte de que esté completo y de que nada haya caducado.",
+                        "Incluye una lámpara de baterías y asegúrate de que funcione (nunca sabes cuándo te puede hacer falta luz)."
+                    ]
+                },
+                {
+                    "type": "list",
+                    "title": "Arma tu botiquin básico.",
+                    "content": [
+                        "Manual de primeros auxilios",
+                        "- 2 vendas absorbentes hemostáticas (5 a 9 pulgadas)",
+                        "- 25 tiritas adhesivas de distintos tamaños",
+                        "- 1 cinta de tela adhesiva (aprox. 9 metros)",
+                        "- 5 paquetes de ungüento antibiótico",
+                        "- 5 paños de limpieza antisépticos",
+                        "- 2 paquetes de aspirinas de 81 mg.",
+                        "- 1 manta isotérmica",
+                        "- 1 máscara para reanimación cardiopulmonar (RCP)",
+                        "- 1 compresa fría instantánea",
+                        "- 2 pares grandes de guantes (que no sean de latex)",
+                        "- 2 paquetes de ungüento de hidrocortisona",
+                        "- Tijeras",
+                        "- 2 vendas (de 3 y 4 pulgadas)",
+                        "- 5 gazas estériles (3x3 pulgadas)",
+                        "- 5 gazas estériles (4x4 pulgadas)",
+                        "- Termómetro oral (sin mercurio y no de cristal)",
+                        "- 2 pañuelos triangulares",
+                        "- Pinzas"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "article",
+            "title": "Terremotos",
+            "urlToImage": "https://cdn.pixabay.com/photo/2016/09/12/21/57/earthquake-1665878_960_720.jpg",
+            "content": [
+                {
+                    "type": "text",
+                    "title": "",
+                    "content": "Los terremotos pueden ser destructivos en una zona muy extensa, sacudiendo la tierra y causando que los edificios se colapsen. Aprende qué hacer antes y durante un terremoto"
+                },
+                {
+                    "type": "checkList",
+                    "title": "Lista de comprobacion previa.",
+                    "content": [
+                        "Verifica que los calentadores de agua y utilizan gas se encuentren bien montados y asegurados",
+                        "Estanterías, pernos, armanos y otros muebles altos deben estar asegurados para evitar que caigan.",
+                        "Cuelga objetos pesados, como cuadros y espejos, lejos de las camas, sillones o de cualquier lugar donde la gente duerme o se sienta",
+                        " Las lámparas de techo deben estar bien aseguradas y de preferencia evita colocarlas en lugares donde exista una concentración importante de personas.",
+                        "Instala seguros fuertes tornillos en lcs gabinetes. Los articulos grandes y pesados deban estar más cerca del suelo",
+                        "Aprende cómo cerrar las válvulas de gas en tu hogar y mantén una llave a la miano para ese propósito. Durante interiores Agáchate, cúbree y sujétate."
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "Durante Interiores",
+                    "content": [
+                        "Agáchate, cúbrete y sujétate. Muévete lo menos posible y permanece pendiente de la caida de objetos Es más importante tener cubierta la cabeza y el torso. Si te encuentras sentado en un escritorio o mesa, colócate a un lado de ella, creando un triángulo entre el objeto y tu posición De otro modo, agáchate donde quiera que estés",
+                        "Si te encuentras en la cama, quédate ahí, protegiendo tu cabeza con una almohada",
+                        "Permanece lejos de las ventanas para evitar ser lastimado por vidrios rotos",
+                        "Quédate en el interior de la edificación hasta que el temblor se detenga y estés seguro de que estás a salvo para salir Si tienes que salir después de que pase el temblor utiliza las escaleras en lugar de un ascensor",
+                        "Ten en cuenta que las alarmas de incendios y sistemas de rociadores con frecuencia se apagan en los edificios durante un terremoto incluso si no hay fuego"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "Durante - Si está en el exterior",
+                    "content": "Encuentra un ligar despejado y tirate al suelo. Quédate allí hasta que pase el temblor (lejos de los edificios, cableado eléctrico, árboles y postes de luz entre otros"
+                },
+                {
+                    "type": "text",
+                    "title": "Durante - Si te encuentras en un vehiculo",
+                    "content": [
+                        "Detén y estaciona tu vehículo en un lugar despejado Evita puentes, pasos a desnivel y cableado eléctrico, si es posible.",
+                        "Quédate dentro del vehículo con el cinturón de seguridad abrochado hasta que el temblor se detenga. Luego maneja con precaución, evitando puentes y rampas que pudieron haberse dañado.",
+                        "Si un cable eléctrico cae sobre tu vehículo, no salgas.Espera a que la asistencia llegue.",
+                        "Si te encuentras en una zona montañosa o cerca de pendientes inestables o acantilados, permanece alerta a la caída de rocas y otros escombros Los deslaves de tierra son a menudo provocados por terremotos."
+                    ]
+                },
+                {
+                    "type": "text",
+                    "title": "Despues",
+                    "content": [
+                        "Si estás fuera de casa, regresa solo cuando las autoridades indiquen que es seguro hacerlo.",
+                        "Mantente preparado para las réplicas. Si se suscita una recuerda: agáchate, cúbrete y detente Las réplicas frecuentemente ccurren minutos, dias, semanas y hasta meses después de un terremoto. ",
+                        "Abre los gabinetes lentamente. Ten cuidado con los objetos que pueden caerse de los estantes.",
+                        "Permanece alejado de las áreas dañadas dentro y en los alrededores de tu casa.",
+                        "Busca y extingue incendios pequeños. El fuego es el peligro más común después de un terremoto.",
+                        "Comprueba si hay fugas de gas para evitar incendios y daños secundarios Rocía los componentes de tu medidor de gas y aparatos de gas, con una mezcla de agua y un poco jabón líquido. Si se generan burbujas significa que existe fuga de gas.",
+                        "Ten cuidado y examina las paredes pisos, puertas, escaleras y ventanas para comprobar si existen daños."
+                    ]
+                }
+            ]
+        }
+    ],
+    "videosYT": {
+        "url": [
+            "https://www.youtube.com/watch?v=SY-oAdwrf4w",
+            "https://www.youtube.com/watch?v=sk_x58kM_70",
+            "https://www.youtube.com/watch?v=R64klLqwqUg",
+            "https://www.youtube.com/watch?v=JMOWbZhISUU",
+            "https://www.youtube.com/watch?v=pzgNpWuh5Uk",
+            "https://www.youtube.com/watch?v=pGfJPGZCfcA",
+            "https://www.youtube.com/watch?v=eChTgerlLeE",
+            "https://www.youtube.com/watch?v=xW2cKgInwjk",
+            "https://www.youtube.com/watch?v=D3UoxKCmwZ8",
+            "https://www.youtube.com/watch?v=bW3Q0TicAR0",
+            "https://www.youtube.com/watch?v=wcB4YKB85B0",
+            "https://www.youtube.com/watch?v=XZccV2-8iMk"
+        ]
+    }
+}
