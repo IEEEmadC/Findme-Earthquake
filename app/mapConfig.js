@@ -1,4 +1,3 @@
-//Cambiar por la ubicacion real del user
 const mapConfig = {
     showsUserLocation: true,
     provider: 'google',
