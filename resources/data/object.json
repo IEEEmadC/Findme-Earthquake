@@ -8,12 +8,12 @@
                 {
                     "type": "text",
                     "title": "",
-                    "content": "Un botiquín de primeros auxilios es una de esas cosas en las que no tendemos a pensar hasta que las echamos en falta. Es un elemento básico en casa, oficina, escuela o hasta para llevar en el auto. Los accidentes ocurren a pesar de que tratemos de evitarlos y estar preparado para enfrentar la situación puede hacer la diferencia. Por eso te compartimos estas indicaciones de la Cruz Roja para que tu kit esté completo y tengas todo lo necesario para hacer frente a una emergencia."
+                    "content": ["Un botiquín de primeros auxilios es una de esas cosas en las que no tendemos a pensar hasta que las echamos en falta. Es un elemento básico en casa, oficina, escuela o hasta para llevar en el auto. Los accidentes ocurren a pesar de que tratemos de evitarlos y estar preparado para enfrentar la situación puede hacer la diferencia. Por eso te compartimos estas indicaciones de la Cruz Roja para que tu kit esté completo y tengas todo lo necesario para hacer frente a una emergencia.",""]
                 },
                 {
                     "type": "text",
                     "title": "",
-                    "content": "Aprende a armar un botiquín de primeros auxilios y lo que requieres para estar preparado en una situación de emergencia."
+                    "content": ["Aprende a armar un botiquín de primeros auxilios y lo que requieres para estar preparado en una situación de emergencia.",""]
                 },
                 {
                     "type": "list",
@@ -30,24 +30,24 @@
                     "title": "Arma tu botiquin básico.",
                     "content": [
                         "Manual de primeros auxilios",
-                        "- 2 vendas absorbentes hemostáticas (5 a 9 pulgadas)",
-                        "- 25 tiritas adhesivas de distintos tamaños",
-                        "- 1 cinta de tela adhesiva (aprox. 9 metros)",
-                        "- 5 paquetes de ungüento antibiótico",
-                        "- 5 paños de limpieza antisépticos",
-                        "- 2 paquetes de aspirinas de 81 mg.",
-                        "- 1 manta isotérmica",
-                        "- 1 máscara para reanimación cardiopulmonar (RCP)",
-                        "- 1 compresa fría instantánea",
-                        "- 2 pares grandes de guantes (que no sean de latex)",
-                        "- 2 paquetes de ungüento de hidrocortisona",
-                        "- Tijeras",
-                        "- 2 vendas (de 3 y 4 pulgadas)",
-                        "- 5 gazas estériles (3x3 pulgadas)",
-                        "- 5 gazas estériles (4x4 pulgadas)",
-                        "- Termómetro oral (sin mercurio y no de cristal)",
-                        "- 2 pañuelos triangulares",
-                        "- Pinzas"
+                        "2 vendas absorbentes hemostáticas (5 a 9 pulgadas)",
+                        "25 tiritas adhesivas de distintos tamaños",
+                        "1 cinta de tela adhesiva (aprox. 9 metros)",
+                        "5 paquetes de ungüento antibiótico",
+                        "5 paños de limpieza antisépticos",
+                        "2 paquetes de aspirinas de 81 mg.",
+                        "1 manta isotérmica",
+                        "1 máscara para reanimación cardiopulmonar (RCP)",
+                        "1 compresa fría instantánea",
+                        "2 pares grandes de guantes (que no sean de latex)",
+                        "2 paquetes de ungüento de hidrocortisona",
+                        "Tijeras",
+                        "2 vendas (de 3 y 4 pulgadas)",
+                        "5 gazas estériles (3x3 pulgadas)",
+                        "5 gazas estériles (4x4 pulgadas)",
+                        "Termómetro oral (sin mercurio y no de cristal)",
+                        "2 pañuelos triangulares",
+                        "Pinzas"
                     ]
                 }
             ]
@@ -60,7 +60,7 @@
                 {
                     "type": "text",
                     "title": "",
-                    "content": "Los terremotos pueden ser destructivos en una zona muy extensa, sacudiendo la tierra y causando que los edificios se colapsen. Aprende qué hacer antes y durante un terremoto"
+                    "content": ["Los terremotos pueden ser destructivos en una zona muy extensa, sacudiendo la tierra y causando que los edificios se colapsen. Aprende qué hacer antes y durante un terremoto"]
                 },
                 {
                     "type": "checkList",
@@ -88,7 +88,7 @@
                 {
                     "type": "text",
                     "title": "Durante - Si está en el exterior",
-                    "content": "Encuentra un ligar despejado y tirate al suelo. Quédate allí hasta que pase el temblor (lejos de los edificios, cableado eléctrico, árboles y postes de luz entre otros"
+                    "content": ["Encuentra un ligar despejado y tirate al suelo. Quédate allí hasta que pase el temblor (lejos de los edificios, cableado eléctrico, árboles y postes de luz entre otros",""]
                 },
                 {
                     "type": "text",

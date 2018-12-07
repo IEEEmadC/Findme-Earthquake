@@ -1,48 +1,28 @@
 var pinData = [
     {
         "key": "1",
-        "title": "Desastre",
-        "image": require("../pins/desastre.png"),
+        "title": "Centro de acopio",
         icon: {
             family: 'MaterialCommunityIcons',
-            name: 'hospital-building',
+            name: 'food-variant',
         },
     },
     {
         "key": "2",
-        "title": "Edificacion Comprometida",
+        "title": "Albergue / sitio seguro",
         icon:{
             family: 'MaterialCommunityIcons',
-            name: 'hospital-building',
+            name: 'security-home',
         },
-        "image": require("../pins/edificacion.png")
     },
     {
         "key": "3",
-        "title": "Hospital",
+        "title": "Calle dañada",
         icon:{
             family: 'MaterialCommunityIcons',
-            name: 'hospital-marker',
-        },
-        "image": require("../pins/hospital.png")
-    },
-    {
-        "key": "4",
-        "title": "Puente Caido",
-        "image": require("../pins/puentecaido.png"),
-        icon:{
-            family: 'MaterialCommunityIcons',
-            name: 'hospital-marker',
+            name: 'view-parallel',
         },
     },
-    {
-        "key": "5",
-        "title": "Carretera Afectada",
-        "image": require("../pins/viamala.png"),
-        icon:{
-            family: 'MaterialCommunityIcons',
-            name: 'hospital-marker',
-        },
-    },
+    
 ]
 module.exports = pinData

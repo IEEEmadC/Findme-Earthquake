@@ -4,7 +4,7 @@ import LayoutVideo from '../layouts/layout_videos';
 import { Text } from 'native-base';
 import { connect } from 'react-redux';
 
-function mapStateToProps(state) {    
+function mapStateToProps(state) {        
     return {
         list: state.videos.videos
     }
@@ -15,7 +15,7 @@ class VideosContainer extends Component {
 
 
     onPressCardVideo = (cardVideo) => {
-        console.log(cardVideo);
+        
     }
 
     render() {     

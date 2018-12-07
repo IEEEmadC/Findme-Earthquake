@@ -64,7 +64,6 @@ class ProfileComponent extends Component {
     }
     componentWillMount() {
         Contacts.map(item => {
-            // console.log(item)
             arrayContacts.push(item)
             this.setState({
                 contacts: arrayContacts,
@@ -74,20 +73,12 @@ class ProfileComponent extends Component {
         StatusBar.setHidden(false)
     }
     onPressButton = () => {
-        console.log('Presionaste el boton')
         ImagePicker.showImagePicker(options, (response) => {
-            console.log('Response = ', response);
 
             if (response.didCancel) {
-                console.log('User cancelled image picker');
             } else if (response.error) {
-                console.log('ImagePicker Error: ', response.error);
             } else {
                 const source = response.uri;
-                console.log(source + "NO PASA ESTE URI")
-                // You can also display the image using data:
-                // const source = { uri: 'data:image/jpeg;base64,' + response.data };
-
                 this.setState({
                     avatarSource: source,
                 });

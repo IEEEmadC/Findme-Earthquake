@@ -18,4 +18,4 @@ var contacts=[
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRFEE_SgXetS_86ZdL05F4jJOFdLy7JPzmh_x0Vb_laRruutL1"
     },
 ]
-module.exports = contacts
+module.exports = contacts 

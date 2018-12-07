@@ -1,6 +1,13 @@
 import React from 'react';
-import { Container, Text, Header, Content, CheckBox,ListItem, Body } from 'native-base';
-import { Image } from 'react-native'
+import { Container, Text, Header, Content, } from 'native-base';
+import { Image, StyleSheet, Dimensions } from 'react-native'
+import NewsListItem from '../components/newsListItem'
+import NewsCheckList from '../components/newsCheckList'
+import NewsTextContent from '../components/newsTextContent'
+
+const screen = Dimensions.get('window');
+
+let key = 1;
 function LayoutNewsDetail(props) {
 
     return (
@@ -17,37 +24,32 @@ function LayoutNewsDetail(props) {
 
             <Content>
 
-                <Text> {props.title}</Text>
+                <Text
+                    style={styles.textTitle}> {props.title}
+                </Text>
 
                 {
                     props.content.map((item) => {
-
+                        
                         switch (item.type) {
                             case 'text':
-                                return <Text> {item.content} </Text>
-
+                                return (
+                                    <NewsTextContent {...item} />
+                                )
                             case 'list':
                                 return (
-                                    
-
-                                    item.content.map(index => {
-                                        return(
-    
-                                            <ListItem>
-                                                <CheckBox checked={false}/>
-                                                <Body>
-                                                    <Text> {index} </Text>
-                                                </Body>
-                                            </ListItem>
-                                        ) 
-    
-                                    })
+                                    <NewsListItem
+                                        content={item.content}
+                                        title={item.title}>
+                                    </NewsListItem>
                                 )
-                                
-                                
-                               
-
-
+                            case 'checkList':
+                                return (
+                                    <NewsCheckList
+                                        content={item.content}
+                                        title={item.title}
+                                    />
+                                )
                         }
 
                     })
@@ -59,5 +61,12 @@ function LayoutNewsDetail(props) {
     );
 
 }
+const styles = StyleSheet.create({
 
+    textTitle: {
+        fontWeight: 'bold',
+        fontSize: (screen.height / screen.width) * 12,
+        color: 'black'
+    },
+});
 export default LayoutNewsDetail;

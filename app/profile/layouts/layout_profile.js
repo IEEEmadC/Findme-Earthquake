@@ -77,7 +77,7 @@ class LayoutProfile extends Component {
                             {
                                 this.props.contacts.map(item =>
                                     <Contacts swipeSettings={swipeSettings}
-                                    key={id++}{...item} />)
+                                    key={id++} onPressCard={this.props.onPressCardProfile} {...item} />)
                             }
                        </Card>
                         

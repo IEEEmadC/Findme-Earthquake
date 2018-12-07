@@ -1,11 +1,11 @@
 import { combineReducers} from 'redux';
 import articles from './articles';
-import maps from './maps';
+import pins from './pins';
 import videos from './videos';
 
 export default combineReducers({
     articles,
-    maps,
+    pins,
     videos
 })
 

@@ -11,9 +11,23 @@ class FirebaseData {
         const articleSnapshot = await firebase.database().ref('/articles').once('value');
         return articleSnapshot.val()
     }
-    static async getPinsMaps() {
-        const pinSnapshot = await firebase.database().ref('/maps').once('value');
-        return pinSnapshot.val()
+    static  getPinsMaps(callback) {
+        // const pinSnapshot = await firebase.database().ref('/maps/pins').once('value');
+         firebase.database().ref('/maps/pins').on('value', (childSnapshot)=>{
+            // console.log(childSnapshot);
+            callback(childSnapshot.val())
+        });
+        // return pinSnapshot.val()
+    }
+    static setPinsMaps(marker, region) {
+        console.log(marker);
+        
+        firebase.database().ref('/maps/pins/' + marker + '/').push(
+            {
+                latitude: region.latitude,
+                longitude: region.longitude
+            }
+        );
     }
 
 }

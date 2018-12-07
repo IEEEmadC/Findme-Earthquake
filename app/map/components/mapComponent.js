@@ -1,14 +1,21 @@
 import React from "react";
 import { StyleSheet } from 'react-native';
 import MapView from 'react-native-maps';
-import mapConfig from '../../mapConfig'
 
-function MapContainer(props) {
+function MapContainer(props) { 
   return (
     <MapView 
-      {...mapConfig} 
+      showsUserLocation={true}
+      provider='google'
       style={{...StyleSheet.absoluteFillObject}} 
       onPress={props.onPressMap}
+      initialRegion={{
+        latitude: props.latitude,
+        longitude: props.longitude,
+        latitudeDelta: props.latitudeDelta,
+        longitudeDelta: props.longitudeDelta,
+      }}
+      
       onRegionChangeComplete={props.onRegionChangeComplete} 
       region={props.region} 
     >

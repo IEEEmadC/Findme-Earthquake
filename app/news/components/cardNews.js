@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardItem, View, Text, Left, Right, Content, Button } from 'native-base';
 import { Image, TouchableOpacity, Modal, WebView, StyleSheet, Dimensions, StatusBar } from 'react-native';
+import News from '../../news/layouts/news_detail';
 const screen = Dimensions.get('window');
 
 class CardNews extends Component {
@@ -27,17 +28,10 @@ class CardNews extends Component {
                 onRequestClose={() => {
                     this.setModalVisible(false);
                 }}>
-
-                <View>
-                    <WebView
-                        source={{ uri: this.state.uri }} />
-                </View>
-                <View>
-                    <Text>{this.state.new.urlToImage}</Text>
-                    <Text>
-                        {this.state.new.title}
-                    </Text>
-                </View>
+            
+                <News
+                    {...this.props}
+                ></News> 
 
             </Modal>
         )
@@ -49,7 +43,6 @@ class CardNews extends Component {
             uri: this.props.urlToImage,
             modalVisible: !this.state.modalVisible
         })
-        console.log(this.state.new);
     }
 
     render() {

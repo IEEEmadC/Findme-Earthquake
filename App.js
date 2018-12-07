@@ -11,59 +11,66 @@ import News from './app/news/layouts/news_detail';
 
 
 
-// async componentDidMount() {
-//   const v = await FirebaseData.getVideo();
-//   console.log(v);
-//   console.log("Aqui.....");    
-//   const y = await YoutubeSearch.getvideo(v);
-//   console.log(y);
-//   const article= await FirebaseData.getArticles();
-//   console.log(article)
-//   //const pin= await FirebaseData.getPinsMaps();
-//   store.dispatch({
-//     type: 'GET_VIDEOS',
-//     payload:{
-//       videos: y
-//     }
-//   })
-//   store.dispatch({
-//     type: 'GET_ARTICLES',
-//     payload:{
-//       articles: article
-//     }
-//   })
-//   // store.dispatch({
-//   //   type: 'GET_PIN_MAPS',
-//   //   payload:{
-//   //     pins: pin
-//   //   }
-//   // })
-
-// }
-// render() {
-//   return (
-//     <Provider
-//       store={store}
-//     >
-//       <Navigator />
-//     </Provider>
-//   )
-// }
-
 import data from './resources/data/object';
 
 class App extends Component {
+  
+  
+  async componentDidMount() {
+    const v = await FirebaseData.getVideo();
+    const y = await YoutubeSearch.getvideo(v);
+    const article= await FirebaseData.getArticles();
+    // const pins= await 
+    FirebaseData.getPinsMaps(this.ojalaFuncione);
+    // console.log(Object.values(pins));
+   
+    store.dispatch({
+      type: 'GET_VIDEOS',
+      payload:{
+        videos: y
+      }
+    })
+    store.dispatch({
+      type: 'GET_ARTICLES',
+      payload:{
+        articles: article
+      }
+    })
+    
+  
+  
+  }
+  
+  
+  
+  ojalaFuncione =(valor )=>{
+    console.log(valor);
+    store.dispatch({
+      type: 'GET_PIN_MAPS',
+      payload:{
+        pins: valor
+      }
+    })
+  }
 
-  
-  
   render() {
-    console.log(data);
     return (
-      <News
-        {...data[0]}
-      ></News>
+      <Provider
+        store={store}
+      >
+        <Navigator />
+      </Provider>
     )
   }
+  
+  
+  // render() {
+  //   return (
+  //     <News
+  //       {...data[1]}
+  //     ></News>
+  //   )
+  // }
 
 }
 
