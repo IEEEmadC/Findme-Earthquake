@@ -69,9 +69,9 @@ class MapScreen extends React.Component {
                                 latitude: marker.latitude,
                                 longitude: marker.longitude
                             }}
-                            title={"Albergue"}
+                            title={"Centro de Acopio"}
                             description={""}
-                            pinColor='#ff0000'
+                            pinColor='#00FF00'
                         />
                     ))
                     }
@@ -81,9 +81,9 @@ class MapScreen extends React.Component {
                                 latitude: marker.latitude,
                                 longitude: marker.longitude
                             }}
-                            title={"Centros de Acopio"}
+                            title={"Sitio Seguro/Albergue"}
                             description={""}
-                            pinColor='#00f900'
+                            pinColor='#0000FF'
                         />
                     ))
                     }
@@ -95,7 +95,7 @@ class MapScreen extends React.Component {
                             }}
                             title={"Calle Comprometida"}
                             description={""}
-                            pinColor='#0001ff'
+                            pinColor='#FF0000'
                         />
                     ))
                     }

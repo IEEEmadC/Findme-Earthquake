@@ -6,8 +6,8 @@ import FirebaseData from './resources/data/firebaseData'
 import YoutubeSearch from './resources/data/youtubeSearch'
 
 
-import News from './app/news/layouts/news_detail';
-
+//import Alert from './modalExample';
+import Alert from './app/alert/containers/container_alert';
 
 
 
@@ -66,9 +66,7 @@ class App extends Component {
   
   // render() {
   //   return (
-  //     <News
-  //       {...data[1]}
-  //     ></News>
+  //     <Alert></Alert>
   //   )
   // }
 

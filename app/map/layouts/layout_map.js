@@ -35,9 +35,8 @@ export default class HomeScreen extends React.Component {
 
   }
   sendToFirebase = (marker) => {
-    console.log(marker);
-    FirebaseData.setPinsMaps(marker,this.state.region)
-    console.log("Guardando: " + this.state.region.latitude);
+    console.log('Guardando: ' + marker);
+    FirebaseData.setPinsMaps(marker, this.state.region)
   }
 
   onRegionChangeComplete = (region) => {
@@ -52,7 +51,7 @@ export default class HomeScreen extends React.Component {
     this.setState({ active: false, visibleFab: true })
     Alert.alert('Confirmación', 'Esta seguro de guardar este sitio', [
       { text: 'Cancel' },
-      { text: 'OK', onPress: this.sendToFirebase(this.state.marker) }
+      { text: 'OK', onPress: () => this.sendToFirebase(this.state.marker) }
     ])
 
   }

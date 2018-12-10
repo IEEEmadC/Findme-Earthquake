@@ -12,15 +12,12 @@ class FirebaseData {
         return articleSnapshot.val()
     }
     static  getPinsMaps(callback) {
-        // const pinSnapshot = await firebase.database().ref('/maps/pins').once('value');
          firebase.database().ref('/maps/pins').on('value', (childSnapshot)=>{
-            // console.log(childSnapshot);
             callback(childSnapshot.val())
         });
-        // return pinSnapshot.val()
     }
     static setPinsMaps(marker, region) {
-        console.log(marker);
+        console.log('Se va a guardar un: '+marker);
         
         firebase.database().ref('/maps/pins/' + marker + '/').push(
             {
