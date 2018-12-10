@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Card, CardItem, View, Text, Left, Right, Content, Button } from 'native-base';
-import { Image, TouchableOpacity, Modal, WebView, StyleSheet, Dimensions, StatusBar } from 'react-native';
-const screen = Dimensions.get('window');
-
-// function CardVideo(props) {
-
+import { Card, CardItem, View, Text, Content } from 'native-base';
+import { Image, TouchableOpacity, Modal, WebView} from 'react-native';
+import styles from '../styles/index'
 class CardVideo extends Component {
 
     ////////////////
@@ -23,6 +20,7 @@ class CardVideo extends Component {
             <Modal
                 animationType="slide"
                 transparent={false}
+                onOrientationChange='landscape'
                 visible={this.state.modalVisible}
                 onRequestClose={() => {
                     this.setModalVisible(false);
@@ -61,8 +59,8 @@ class CardVideo extends Component {
                             </View>
                             <View style={styles.touchablestyle}>
                                 <Text style={styles.textTitle}>{this.props.snippet.title} </Text>
-                                <Text style={styles.textChannel}>{this.props.snippet.channelTitle}</Text>
-                                <Text style={styles.textPublished}>{this.props.snippet.publishedAt}</Text>
+                                <Text style={styles.textBody}>{this.props.snippet.channelTitle}</Text>
+                                <Text style={styles.textBody}>{this.props.snippet.publishedAt}</Text>
                             </View>
                         </TouchableOpacity>
                     </CardItem>
@@ -71,29 +69,5 @@ class CardVideo extends Component {
         );
     }
 }
-const styles = StyleSheet.create({
-    touchablestyle: {
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    imageVideo: {
-        width: 0.9*screen.width,
-        height: screen.width/3,
-        borderRadius:10,
-        justifyContent: 'center'
-    },
-    textTitle: {
-        fontWeight: 'bold',
-        fontSize: (screen.height / screen.width) * 10,
-    },
-    textChannel: {
-        fontWeight: 'normal',
-        fontSize: (screen.height / screen.width) * 8,
-    },
-    textPublished: {
-        fontWeight: 'normal',
-        fontSize: (screen.height / screen.width) * 7,
-    }
-});
 
 export default CardVideo;

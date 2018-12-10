@@ -7,7 +7,7 @@ import YoutubeSearch from './resources/data/youtubeSearch'
 
 
 //import Alert from './modalExample';
-import Alert from './app/alert/containers/container_alert';
+import Alert from './app/news/containers/container_news';
 
 
 
@@ -21,7 +21,7 @@ class App extends Component {
     const y = await YoutubeSearch.getvideo(v);
     const article= await FirebaseData.getArticles();
     // const pins= await 
-    FirebaseData.getPinsMaps(this.ojalaFuncione);
+    // FirebaseData.getPinsMaps(this.ojalaFuncione);
     // console.log(Object.values(pins));
    
     store.dispatch({
@@ -36,21 +36,18 @@ class App extends Component {
         articles: article
       }
     })
-    
-  
-  
   }
   
   
   
   ojalaFuncione =(valor )=>{
-    console.log(valor);
-    store.dispatch({
-      type: 'GET_PIN_MAPS',
-      payload:{
-        pins: valor
-      }
-    })
+    // console.log(valor);
+    // store.dispatch({
+    //   type: 'GET_PIN_MAPS',
+    //   payload:{
+    //     pins: valor
+    //   }
+    // })
   }
 
   render() {

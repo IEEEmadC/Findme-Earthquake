@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardItem, View, Text, Left, Icon, CheckBox, ListItem, Body, Button } from 'native-base';
-import { Image, TouchableOpacity, Modal, WebView, StyleSheet, Dimensions, StatusBar } from 'react-native';
-const screen = Dimensions.get('window');
-
+import {View, Text, Icon, ListItem, Body } from 'native-base';
+import styles from '../styles/index'
 
 function NewsListItem(props) {
     var number = 1;
@@ -21,7 +19,7 @@ function NewsListItem(props) {
                                 {/* <Text style={styles.textNumber}>{number++}</Text> */}
                             </View>
                             <Body>
-                                <Text> {index} </Text>
+                                <Text style={styles.textBody}> {index} </Text>
                             </Body>
                         </ListItem>
                     )
@@ -33,35 +31,5 @@ function NewsListItem(props) {
 
     )
 }
-const styles = StyleSheet.create({
-    viewTitle:{
-        alignContent:'center',
-        alignItems:'center'
-    },
-    textTitle: {
-        fontWeight: 'bold',
-        fontSize: (screen.height / screen.width) * 13,
-        color: 'green'
-    },
-    textNumber: {
-        fontWeight: 'bold',
-        fontSize: (screen.height / screen.width) * 8,
-        color: 'white'
-    },
-    textBody: {
-        fontWeight: 'bold',
-        fontSize: (screen.height / screen.width) * 9,
-        color: 'black'
-    },
-    viewCircle: {
-        paddingTop: 2,
-        borderRadius: screen.width / 22,
-        width: screen.width /11,
-        height: screen.width /11,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'transparent'
-    },
-});
 
 export default NewsListItem;

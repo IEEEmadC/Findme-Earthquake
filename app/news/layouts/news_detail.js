@@ -1,11 +1,10 @@
 import React from 'react';
 import { Container, Text, Header, Content, } from 'native-base';
-import { Image, StyleSheet, Dimensions } from 'react-native'
+import { Image } from 'react-native'
 import NewsListItem from '../components/newsListItem'
 import NewsCheckList from '../components/newsCheckList'
 import NewsTextContent from '../components/newsTextContent'
-
-const screen = Dimensions.get('window');
+import styles from '../styles/index'
 
 let key = 1;
 function LayoutNewsDetail(props) {
@@ -61,12 +60,4 @@ function LayoutNewsDetail(props) {
     );
 
 }
-const styles = StyleSheet.create({
-
-    textTitle: {
-        fontWeight: 'bold',
-        fontSize: (screen.height / screen.width) * 12,
-        color: 'black'
-    },
-});
 export default LayoutNewsDetail;

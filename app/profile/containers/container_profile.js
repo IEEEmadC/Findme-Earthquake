@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { StatusBar, StyleSheet, Dimensions, Image, Modal } from 'react-native'
-import { Text, Button, Container } from "native-base";
+import { StatusBar, StyleSheet, Dimensions} from 'react-native'
+import { Text,Container } from "native-base";
 import Contacts from '../../../resources/data/contacts'
 import LayoutProfile from '../layouts/layout_profile'
 import ImagePicker from 'react-native-image-picker';
-
-
+import Modal from '../components/imageModal';
 
 const options = {
     title: 'Seleccionar Foto',
@@ -31,36 +30,7 @@ class ProfileComponent extends Component {
         this.setState({ modalUserVisible: visible });
     }
     rendermodal = () => {
-        return (
-            <Modal
-                animationType="slide"
-                transparent={false}
-
-                visible={this.state.modalUserVisible}
-                onRequestClose={() => {
-                    this.setModalVisible(false);
-                }}
-            >
-                <Container
-                    style={{
-                        width: screen.width,
-                        height: screen.height,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        backgroundColor: 'black',
-                    }}
-                >
-                    <Image
-                        style={{
-                            width: screen.width,
-                            height: screen.height / 3,
-                            borderRadius: 0
-                        }}
-                        source={{ uri: this.state.avatarSource }}
-                    />
-                </Container>
-            </Modal>
-        )
+        return <Modal/>
     }
     componentWillMount() {
         Contacts.map(item => {

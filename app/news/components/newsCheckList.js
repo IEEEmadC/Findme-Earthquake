@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardItem, View, Text, Left, Right, CheckBox, ListItem, Body, Button } from 'native-base';
-import { Image, TouchableOpacity, Modal, WebView, StyleSheet, Dimensions, StatusBar } from 'react-native';
-const screen = Dimensions.get('window');
-
+import { View, Text, CheckBox, ListItem, Body } from 'native-base';
+import styles from '../styles/index'
 
 function NewsCheckList(props) {
     return (
@@ -20,20 +18,6 @@ function NewsCheckList(props) {
         })
     )
 }
-const styles = StyleSheet.create({
 
-    textBody: {
-        fontWeight: 'normal',
-        fontSize: (screen.height / screen.width) * 10,
-        color: 'black'
-    },
-    viewCheck: {
-        padding:0,
-        width: screen.width / 8,
-        height: screen.width / 8,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
 
 export default NewsCheckList;
