@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Modal, Text } from 'react-native';
-import News from '../../news/layouts/news_detail';
+import ProfileEdit from './profileEdit'
 
 function NewsModal(props) {
     return (
@@ -10,7 +10,7 @@ function NewsModal(props) {
             visible={props.modalVisible}
             onRequestClose={props.onRequestClose}
         >
-            <News {...props.content} />
+            <ProfileEdit {...props.content}> </ProfileEdit>
         </Modal>
     )
 }

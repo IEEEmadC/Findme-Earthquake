@@ -5,6 +5,15 @@ const icons = {
         name: 'information-outline' 
     },
 
+    like_outline:{
+        type: 'AntDesign',
+        name: 'like2'    
+    },
+    like:{
+        type: 'EvilIcons',
+        name: 'like'    
+    }
+
 
 }
 

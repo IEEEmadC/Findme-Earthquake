@@ -1,5 +1,5 @@
 import React from 'react';
-import { DrawerNavigator, createMaterialTopTabNavigator} from 'react-navigation';
+import {DrawerNavigator,createMaterialTopTabNavigator} from 'react-navigation';
 import{Icon} from 'native-base'
 import MapScreen from '../map/layouts/layout_map';
 import SideBar from '../sidebar/container/container';
@@ -11,16 +11,16 @@ import Profile from '../profile/containers/container_profile';
 
 const HomeTab = createMaterialTopTabNavigator(
   {
-    Profile:{
-      screen: Profile,
-      params: { banner: 'Home Screen' },
-      navigationOptions :{
-        title: "kkkk",
-        tabBarIcon: ({tintColor})=>
-         (<Icon type="Entypo" name="fingerprint" style={{fontSize: 20,color: tintColor}}/>)
-      },
+    // Profile:{
+    //   screen: Profile,
+    //   params: { banner: 'Home Screen' },
+    //   navigationOptions :{
+    //     title: "kkkk",
+    //     tabBarIcon: ({tintColor})=>
+    //      (<Icon type="Entypo" name="fingerprint" style={{fontSize: 20,color: tintColor}}/>)
+    //   },
     
-    },
+    // },
     News:{
       screen: NewsScreen,
       navigationOptions :{
@@ -72,3 +72,4 @@ const HomeScreenRoute = DrawerNavigator(
   }
 );
 export default HomeScreenRoute;
+// export default HomeTab;

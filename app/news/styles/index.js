@@ -4,49 +4,27 @@ import dimens from '../../../resources/values/dimens';
 
 
 const styles = StyleSheet.create({
-    viewTitle:{
-        alignContent:'center',
-        alignItems:'center'
+    
+    cardContainer:{
+        flex: 1,
+        height: dimens.height / 3,
+        justifyContent: 'flex-end'
     },
-    textTitle: {
-        fontWeight: 'bold',
-        fontSize: dimens.fontSize_textTitle,
-        color: colors.PRIMARY_TEXT
+    cardImage:{
+        width: '100%',
+        height: '100%'
     },
-    textBody: {
-        fontWeight: 'normal',
-        fontSize: (dimens.height / dimens.width) * 9,
-        color: colors.SECONDARY_TEXT
+    cardTextView:{
+        backgroundColor: '#00000055',
+        width: '100%',
+        height: '50%',
+        position: 'absolute',
+        padding: 16
     },
-    viewCircle: {
-        borderRadius: dimens.width / 16,
-        width: dimens.width / 8,
-        height: dimens.width / 8,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: colors.LIGHT_PRIMARY_COLOR
-    },
-    viewCheck: {
-        padding:0,
-        width: dimens.width / 8,
-        height: dimens.width / 8,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    viewText : {
-        width: dimens.width,
-        backgroundColor: colors.ACCENT_COLOR,
-        position:'absolute',
-        alignContent:'flex-end'
-    },
-    imageNew: {
-        height: dimens.height/3, width: dimens.width, flex: 1
-    },
-    cardItem:{
-        width:dimens.width,
-        height: dimens.width,
-        alignContent:'center',
-        justifyContent:'center',
+    cardTextTitle:{
+        fontSize: dimens.fontSize_title,
+        color: colors.WHITE,
+
     }
 
 

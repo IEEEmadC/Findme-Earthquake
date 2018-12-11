@@ -5,6 +5,7 @@ import Contacts from '../../../resources/data/contacts'
 import LayoutProfile from '../layouts/layout_profile'
 import ImagePicker from 'react-native-image-picker';
 import Modal from '../components/imageModal';
+import ModalProfile from '../components/profileEdit'
 
 const options = {
     title: 'Seleccionar Foto',
@@ -23,6 +24,7 @@ class ProfileComponent extends Component {
         this.state = {
             contacts: arrayContacts,
             modalUserVisible: false,
+            modalEditVisible: false,
             avatarSource: url
         }
     };
@@ -31,6 +33,9 @@ class ProfileComponent extends Component {
     }
     rendermodal = () => {
         return <Modal/>
+    }
+    renderprofileModal=()=>{
+        return <ModalProfile/>
     }
     componentWillMount() {
         Contacts.map(item => {
@@ -61,6 +66,7 @@ class ProfileComponent extends Component {
             modalUserVisible: !this.state.modalUserVisible
         })
     }
+    
     render() {
         const { contacts, modalUserVisible } = this.state
         if (contacts.length > 1) {

@@ -1,7 +1,7 @@
 import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 import Register from './registerContainer'
 import Confirmation from './registerContainer_confirmation'
-import Home from '../../app/containers/AppNavigator';
+import Home from '../../app/navigation/tab';
 import Loading from '../../loading/container/loading_container'
 const AuthStack = createStackNavigator({ 
     Loading:{

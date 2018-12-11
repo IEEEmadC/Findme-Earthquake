@@ -1,37 +1,60 @@
 import React, { Component } from 'react';
-import { Card, CardItem, View, Text, Content } from 'native-base';
+import { Card, CardItem, View, Text, Content, Icon, Button, Title } from 'native-base';
 import { Image, TouchableOpacity } from 'react-native';
-import News from '../../news/layouts/news_detail';
 import styles from '../styles/index';
 import Modal from '../components/newsModal';
+import icons from '../../../resources/values/icons';
 
 
 class CardNews extends Component {
 
+    state = {
+        modalVisible: false,
+    };
+    setModalVisible(visible) {
+        this.setState({ modalVisible: visible });
+    }
+
     render() {
         return (
             <Content>
+                <Modal modalVisible={this.state.modalVisible}
+                    onRequestClose={() => {
+                        this.setModalVisible(false);
+                    }}
+                    content={{...this.props}}
+                />
                 <Card>
                     <CardItem cardBody >
-                        <TouchableOpacity onPress={this.onPressNew}>
-
+                        <TouchableOpacity
+                            style={styles.cardContainer}
+                            onPress={() => {
+                                this.setModalVisible(true);
+                            }}
+                        >
                             <Image
-                                style={styles.imageNew}
+                                style={styles.cardImage}
                                 source={{ uri: this.props.urlToImage }}
                             />
-                            <View style={styles.viewText}>
-                            <Text
-                                style={styles.textTitle}>
-                                {this.props.title}
-                            </Text>
+                            <View style={styles.cardTextView} >
 
+                                {/* 
+                                
+                                <Text style={styles.cardTextTitle} >
+                                </Text> */}
+                                <Title style={{textAlign:'left'}}> 
+                                    {this.props.title}
+
+                                </Title>
+                                <Button transparent>
+                                    <Icon {...icons.like} />
+                                </Button>
                             </View>
 
                         </TouchableOpacity>
                     </CardItem>
                 </Card>
             </Content>
-
         );
     }
 }
@@ -39,34 +62,3 @@ class CardNews extends Component {
 
 export default CardNews;
 
-
-// constructor(props) {
-//     super(props);
-//     this.state = {
-//         modalVisible: false,
-//         new: [],
-//         uri: ''
-//     };
-// }
-// setModalVisible(visible) {
-//     this.setState({ modalVisible: visible });
-// }
-
-
-// rendermodal() {
-//     return (
-//         <Modal
-//             // modalVisible={this.state.modalVisible}
-//             // onClose={this.setModalVisible(false)}
-//             // {...this.props}
-//         />
-//     )
-// }
-// onPressNew = (event) => {
-//     // this.props.onPressCard(this.props)
-//     this.setState({
-//         new: this.props,
-//         uri: this.props.urlToImage,
-//         modalVisible: !this.state.modalVisible
-//     })
-// }

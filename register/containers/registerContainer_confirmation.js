@@ -54,7 +54,6 @@ export default class AnatomyExample extends Component {
     const phoneNumber = navigation.getParam('phoneNumber')
 
     if (user) {
-      alert("Exitoso!!!!")
       this.props.navigation.navigate('App')
     }
     return (
