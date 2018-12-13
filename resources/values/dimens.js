@@ -12,6 +12,8 @@ const dimens = {
     fontSize_body1: fontScale* 14,
     fontSize_caption: fontScale* 12,
 
+    fontSize_width: fontScale,
+    fontSize_height: fontScale,
     width:screen.width,
     height:screen.height,
 }

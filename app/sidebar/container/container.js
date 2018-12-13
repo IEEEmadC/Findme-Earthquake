@@ -13,6 +13,7 @@ class Container extends Component{
     } 
 
     render(){
+        console.log(this.props)
         return(
             <Layout
                 logoApp = {require('../../../resources/images/FindMeEarthQuake.png')}

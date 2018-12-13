@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Layout from '../layouts/layout_confirmation';
 import { AsyncStorage } from 'react-native'
 import firebase from 'react-native-firebase';
-
-export default class AnatomyExample extends Component {
+import {connect} from 'react-redux'
+class AnatomyExample extends Component {
   constructor(props) {
     super(props);
     this.unsubscribe = null;
@@ -19,8 +19,7 @@ export default class AnatomyExample extends Component {
     if (confirmResult && codeInput.length) {
       confirmResult.confirm(codeInput)
         .then((user) => {
-          alert("Exito")
-          this.props.navigation.navigate('App')
+          this.props.navigation.navigate('InformationUser')
         })
         .catch(error => alert("fallo" + error));
     }
@@ -53,9 +52,9 @@ export default class AnatomyExample extends Component {
     const confirmResult = navigation.getParam('confirmResult')
     const phoneNumber = navigation.getParam('phoneNumber')
 
-    if (user) {
-      this.props.navigation.navigate('App')
-    }
+    // if (user) {
+    //   this.props.navigation.navigate('App')
+    // }
     return (
       <Layout
         onPressButton={() => this.confirmCode(confirmResult)}
@@ -65,3 +64,5 @@ export default class AnatomyExample extends Component {
     )
   }
 }
+
+export default connect (null)(AnatomyExample)

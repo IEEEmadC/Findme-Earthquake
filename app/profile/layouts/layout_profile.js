@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Contacts from '../components/cardContacts'
 import { Container, Content, Button, Icon, Header, Body, Text, Card } from 'native-base';
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet, Dimensions, Alert } from 'react-native'
 import Avatar from '../../components/Avart'
 const screen = Dimensions.get('window');
 
@@ -18,7 +18,7 @@ const swipeSettings = {
                     [
                         {
                             text: 'Si', onPress: () => {
-                                alert('Se elimino Prr');
+                                Alert.alert('Se elimino Prr');
                             }
                         },
                         { text: 'No', onPress: () => console.log('Cancelado'), style: 'cancel' },

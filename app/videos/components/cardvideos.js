@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Card, CardItem, View, Text, Content } from 'native-base';
-import { Image, TouchableOpacity, Modal, WebView} from 'react-native';
+import { Card, CardItem, View, Text, Content,Left,Body } from 'native-base';
+import { Image, TouchableOpacity, Modal, WebView, StyleSheet, Dimensions, StatusBar } from 'react-native';
 import styles from '../styles/index'
+const screen = Dimensions.get('window');
 class CardVideo extends Component {
 
     ////////////////
@@ -48,22 +49,22 @@ class CardVideo extends Component {
         return (
             <Content>
                 {this.rendermodal()}
-                <Card>
-                    <CardItem>
-                        <TouchableOpacity style={styles.touchablestyle} onPress={this.onP}>
-                            <View >
+                <Card transparent>
+                    <TouchableOpacity onPress={this.onP}>
+                        <CardItem cardBody>
+                            <Left>
                                 <Image
                                     style={styles.imageVideo}
                                     source={{ uri: this.props.snippet.thumbnails.medium.url }}
                                 />
-                            </View>
-                            <View style={styles.touchablestyle}>
-                                <Text style={styles.textTitle}>{this.props.snippet.title} </Text>
-                                <Text style={styles.textBody}>{this.props.snippet.channelTitle}</Text>
-                                <Text style={styles.textBody}>{this.props.snippet.publishedAt}</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </CardItem>
+                            </Left>
+                            <Body style={{paddingLeft:20}}>
+                                <Text style={styles.textTitleVideo}>{this.props.snippet.title} </Text>
+                                <Text style={styles.textChannel}>{this.props.snippet.channelTitle}</Text>
+                                <Text style={styles.textPublished}>{new Date(this.props.snippet.publishedAt).toUTCString()}</Text>
+                            </Body>
+                        </CardItem>
+                    </TouchableOpacity>
                 </Card>
             </Content>
         );

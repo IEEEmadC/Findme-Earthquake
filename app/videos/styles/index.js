@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native'
 import colors from '../../../resources/values/colors';
+import dimens from '../../../resources/values/dimens';
 const screen = Dimensions.get('window');
 const styles = StyleSheet.create({
     touchablestyle: {
@@ -7,20 +8,31 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     imageVideo: {
-        width: 0.9*screen.width,
-        height: screen.width/3,
-        borderRadius:10,
+        width: dimens.fontSize_width*200,
+        height: dimens.fontSize_height*100,
         justifyContent: 'center'
     },
     textTitle: {
         fontWeight: 'bold',
-        fontSize: (screen.height / screen.width) * 12,
+        fontSize: dimens.fontSize_title,
         color: colors.PRIMARY_TEXT
     },
     textBody: {
         fontWeight: 'normal',
-        fontSize: (screen.height / screen.width) * 9,
+        fontSize: dimens.fontSize_body1,
         color: colors.SECONDARY_TEXT
+    },
+    textTitleVideo: {
+        fontWeight: 'bold',
+        fontSize: dimens.fontSize_subhead,
+    },
+    textChannel: {
+        fontWeight: 'normal',
+        fontSize: dimens.fontSize_caption,
+    },
+    textPublished: {
+        fontWeight: 'normal',
+        fontSize: dimens.fontSize_caption,
     }
 })
 
