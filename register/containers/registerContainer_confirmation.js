@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../layouts/layout_confirmation';
-import { AsyncStorage } from 'react-native'
-import firebase from 'react-native-firebase';
+import {store} from '../../store'
+import firebase from 'react-native-firebase'
 import {connect} from 'react-redux'
 class AnatomyExample extends Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class AnatomyExample extends Component {
     this.state = {
       user: null,
       codeInput: '',
+      phoneNumber: null
     };
   }
 
@@ -19,15 +20,31 @@ class AnatomyExample extends Component {
     if (confirmResult && codeInput.length) {
       confirmResult.confirm(codeInput)
         .then((user) => {
+          console.log("usuario auth su telefono es: ")    
+          console.log(user._user.phoneNumber);
+          this.setState({
+            phoneNumber:user._user.phoneNumber
+          })
+          console.log(this.state.phoneNumber);
+          store.dispatch({
+            type: 'SET_USER',
+            payload:{
+              user: {
+                phoneNumber: this.state.phoneNumber
+              }
+            }
+          })
           this.props.navigation.navigate('InformationUser')
+
         })
-        .catch(error => alert("fallo" + error));
+        .catch(error => alert("Aviso","Se introdujo un código erroneo. Intenta de nuevo." + error));
     }
   };
   componentDidMount() {
     this.unsubscribe = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ user: user.toJSON() });
+        
       } else {
         // User has been signed out, reset the state
         this.setState({

@@ -43,7 +43,6 @@ export default class HomeScreen extends React.Component {
     this.setState({
       region
     })
-    console.log(this.state.region);
 
   }
 

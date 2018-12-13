@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Layout from '../layouts/layout_informationUser';
 import { Alert } from 'react-native'
 import firebase from 'react-native-firebase';
+import {store} from '../../store'
 import { connect } from 'react-redux'
 class InformationUser extends Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class InformationUser extends Component {
         this.unsubscribe = null;
         this.state = {
             userName: null,
+            uri:''
         };
     }
     onChangeText = (value) => {
@@ -16,29 +18,45 @@ class InformationUser extends Component {
             userName: value
         });
     }
+    saveInformation =()=>{
+        console.log('Informacion a guardar');
+        console.log(this.props.user.phoneNumber);
+        console.log(this.state);
+        
+        
+        
+        store.dispatch({
+            type: 'SET_USER',
+            payload:{
+              user: {
+                phoneNumber: this.props.user.phoneNumber,
+                name: this.state.userName,
+                image: this.state.uri,
+              }
+            }
+          })   
+          this.props.navigation.navigate('App')
+    }
     onPressButton = () => {
         Alert.alert('Aviso', 'Se guardaran tus datos, ¿Estás de acuerdo?', [
-            { text: "Ok", onPress: () => this.props.navigation.navigate('App') },
+            { text: "Ok", onPress: () => this.saveInformation() },
             { text: "Cancelar", onPress: () => console.log('Cancel Pressed'), style: 'cancel' }
         ],
             { cancelable: false })
     }
     render() {
-        const { user } = this.state;
-        const { navigation } = this.props
-        const phoneNumber = navigation.getParam('phoneNumber')
         return (
             <Layout
-                phoneNumber={phoneNumber}
+                phoneNumber={this.props.user.phoneNumber}
                 onChangeText={this.onChangeText}
                 onPressButton={this.onPressButton}
             />
         )
     }
 }
-function mapStateToProps(state) {
+function mapStateToProps(state) {    
     return {
-        user: state.user
+        user: state.user.user
     }   
 }
 export default connect(mapStateToProps)(InformationUser)

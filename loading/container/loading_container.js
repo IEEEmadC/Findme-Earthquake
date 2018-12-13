@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import LayoutLoading from '../layouts/layout_loading'
-import {StatusBar} from 'react-native'
+import { StatusBar } from 'react-native'
 import firebase from 'react-native-firebase';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 class LoadingConfirmation extends Component {
     constructor(props) {
@@ -27,24 +27,15 @@ class LoadingConfirmation extends Component {
 
     componentDidMount() {
         StatusBar.setHidden(true);
-        this.unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-            // if (this.props.user) {
-            //     this.setState({ user: user.toJSON() });
-            //     setTimeout(() => {
-            //         this.props.navigation.navigate('Home')
-            //     }, 2000)
-            // } else {
-            //     // User has been signed out, reset the state
-            //     this.setState({
-            //         user: null,
-            //     });
-            //     setTimeout(() => {
-            //         this.props.navigation.navigate('Register')
-            //     }, 2)
-            // }
-                    this.props.navigation.navigate('Register')
-
-        });
+        console.log('Validando');
+        console.log(this.props.user.name);
+        this.props.user.name ?
+            setTimeout(() => {
+                this.props.navigation.navigate('Home')
+            }, 2000) :
+            setTimeout(() => {
+                this.props.navigation.navigate('Register')
+            }, 2)
     }
     render() {
         return (
@@ -52,9 +43,11 @@ class LoadingConfirmation extends Component {
         )
     }
 }
-function mapStateToProps(state){
-    return{
-        user: state.user
+function mapStateToProps(state) {
+    console.log(state.user.user.name);
+
+    return {
+        user: state.user.user
     }
 }
 export default connect(mapStateToProps)(LoadingConfirmation)
