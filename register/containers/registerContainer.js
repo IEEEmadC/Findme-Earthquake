@@ -36,7 +36,7 @@ export default class AnatomyExample extends Component {
     const { countryCode, phoneNumber } = this.state;
     firebase.auth().signInWithPhoneNumber("+"+countryCode+phoneNumber)
       .then(confirmResult => this.setState({ confirmResult }))
-      .catch(error => alert('Número de telefono incorrecto.'));
+      .catch(error => alert('Número de telefono incorrecto.'+error));
   };
 
 

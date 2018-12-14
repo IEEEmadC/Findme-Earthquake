@@ -15,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "668510197057-jou7rqjkp9356m0b4n69b6b9sh39t1ld.apps.googleusercontent.com",
+          "client_id": "668510197057-32ljj68l0i09fm8mecop2hc7dab4l1ir.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.rondavillavicenciofindmeearthquakeapp",
@@ -23,13 +23,21 @@
           }
         },
         {
-          "client_id": "668510197057-t9lftmt7rh5df30f7nlfoddjbknnej6f.apps.googleusercontent.com",
+          "client_id": "668510197057-0hjtmgnk38lvuo6ges3m8pg9pf5vfai3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rondavillavicenciofindmeearthquakeapp",
+            "certificate_hash": "aaee3a9fcf6b5823d8dd5e25e90cf8e99fd6feab"
+          }
+        },
+        {
+          "client_id": "668510197057-fv5oe15jcq21mn6p5n22hrv96vsphn6o.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAFq28eu1oUC_LLxr6wHBoW-6w83wJP0-A"
+          "current_key": "AIzaSyCONCeq9CGhATNpljjvFLqJIlL_1bSVb98"
         }
       ],
       "services": {
@@ -40,7 +48,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "668510197057-t9lftmt7rh5df30f7nlfoddjbknnej6f.apps.googleusercontent.com",
+              "client_id": "668510197057-fv5oe15jcq21mn6p5n22hrv96vsphn6o.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

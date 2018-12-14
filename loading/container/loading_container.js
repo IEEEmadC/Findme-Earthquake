@@ -14,7 +14,7 @@ class LoadingConfirmation extends Component {
     // }
     componentWillMount() {
         var config = {
-            apiKey: "AIzaSyAg-8uXG2MwUhnP1dVaWDNDeGnLaLpeWQ4",
+            apiKey: "AIzaSyCLodGVAitkJe56UnHncS2N1omWJJvlb4o",
             appId: '1:668510197057:android:0215ba072bca4a35',
             authDomain: "find-me-earthquake.firebaseapp.com",
             databaseURL: "https://find-me-earthquake.firebaseio.com",
