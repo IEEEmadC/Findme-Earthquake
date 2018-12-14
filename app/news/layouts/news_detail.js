@@ -7,6 +7,8 @@ import NewsTextContent from '../components/newsTextContent'
 import styles from '../styles/index'
 
 import ReactNativeParallaxHeader from 'react-native-parallax-header';
+import colors from '../../../resources/values/colors';
+import dimens from '../../../resources/values/dimens';
 
 
 function LayoutNewsDetail(props) {
@@ -14,7 +16,9 @@ function LayoutNewsDetail(props) {
     renderContent = () => {
         return (
 
-            <Content padder>
+            <Content padder
+             style={{ color: colors.SECONDARY_TEXT, fontSize: dimens.fontSize_body1 }}
+            >
                 <Text
                     style={styles.textTitle}> {props.title}
                 </Text>
@@ -22,10 +26,10 @@ function LayoutNewsDetail(props) {
                     props.content.map((item) => {
 
                         switch (item.type) {
-                            // case 'text':
-                            //     return (
-                            //         <NewsTextContent {...item} />
-                            //     )
+                            case 'text':
+                                return (
+                                    <NewsTextContent {...item} />
+                                )
                             case 'list':
                                 return (
                                     <NewsListItem

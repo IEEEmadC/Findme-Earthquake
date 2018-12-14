@@ -1,18 +1,18 @@
 import React from 'react';
 import News from '../components/cardNews'
-
 import { Container, Header, Content } from 'native-base';
-let id=0;
+
+
 function LayoutNews(props) {
 
     return (
         <Container>
-            <Header
+            {/* <Header
                 style={{ backgroundColor: 'white' }}
-            ></Header>
+            ></Header> */}
             <Content>
                 {
-                    props.news.map(item => <News key={id++} {...item}/>)
+                    props.news.map(item => <News {...item}/>)
                 }
             </Content>
         </Container>

@@ -20,7 +20,8 @@ class MapScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            region: {}, initialRegion: {},
+            region: {}, 
+            initialRegion: {},
             active: true,
             markers: [],
         };
@@ -60,7 +61,10 @@ class MapScreen extends React.Component {
         return (
             <Container>
                 <MapContainer
-                    latitude={this.state.region.latitude} longitude={this.state.region.longitude} latitudeDelta={LATITUDE_DELTA} longitudeDelta={LONGITUDE_DELTA}
+                    latitude={this.state.region.latitude} 
+                    longitude={this.state.region.longitude} 
+                    latitudeDelta={LATITUDE_DELTA} 
+                    longitudeDelta={LONGITUDE_DELTA}
                     onRegionChangeComplete={this.state.active ? this.onRegionChangeComplete : null}
                 >
                     {/* {pinsFood.map(marker => (

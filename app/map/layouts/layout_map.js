@@ -20,15 +20,15 @@ export default class HomeScreen extends React.Component {
     };
   }
 
-  async componentWillMount() {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-      )
-    } catch (err) {
-      console.warn(err)
-    }
-  }
+  // async componentWillMount() {
+  //   try {
+  //     const granted = await PermissionsAndroid.request(
+  //       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+  //     )
+  //   } catch (err) {
+  //     console.warn(err)
+  //   }
+  // }
 
   onPressItem = (marker) => {
     this.setState({ marker, visibleFab: false })

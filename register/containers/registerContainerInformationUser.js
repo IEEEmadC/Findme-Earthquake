@@ -22,9 +22,6 @@ class InformationUser extends Component {
         console.log('Informacion a guardar');
         console.log(this.props.user.phoneNumber);
         console.log(this.state);
-        
-        
-        
         store.dispatch({
             type: 'SET_USER',
             payload:{
@@ -35,7 +32,7 @@ class InformationUser extends Component {
               }
             }
           })   
-          this.props.navigation.navigate('App')
+          this.props.navigation.navigate('DowloadingData')
     }
     onPressButton = () => {
         Alert.alert('Aviso', 'Se guardaran tus datos, ¿Estás de acuerdo?', [

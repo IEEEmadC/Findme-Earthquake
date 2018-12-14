@@ -4,7 +4,7 @@ import styles from '../style/index'
 function register(props) {
   return (
     <Container>
-      <Content style={styles.viewContainer}>
+      <Content padder>
 
         <Text style={styles.textBody}>Enviaremos un SMS para verificar tu numero de teléfono.</Text>
         <Text style={styles.textBody}>Introduce tu código de país y numero de teléfono.</Text>

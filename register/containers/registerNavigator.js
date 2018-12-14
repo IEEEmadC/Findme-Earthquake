@@ -4,13 +4,12 @@ import Confirmation from './registerContainer_confirmation'
 import Home from '../../app/navigation/tab';
 import Loading from '../../loading/container/loading_container'
 import InformationUser from './registerContainerInformationUser'
+import DowloadingData from './dowloadingData';
+
+
+
 const AuthStack = createStackNavigator({
-  Loading: {
-    screen: Loading,
-    navigationOptions: () => ({
-      header: null,
-    })
-  },
+  
   Register: {
     screen: Register,
     navigationOptions: () => ({
@@ -29,6 +28,9 @@ const AuthStack = createStackNavigator({
       title:"Agrega tus datos"
     })
   },
+  DowloadingData:{
+    screen: DowloadingData,
+  }
 });
 const AppStack = createStackNavigator({
   Home: {
@@ -42,10 +44,11 @@ const AppStack = createStackNavigator({
 
 export default createSwitchNavigator(
   {
+    Loading: Loading,
     Auth: AuthStack,
     App: AppStack,
   },
   {
-    initialRouteName: 'Auth',
+    initialRouteName: 'Loading',
   }
 );

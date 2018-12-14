@@ -5,13 +5,13 @@ import firebase from 'react-native-firebase';
 import { connect } from 'react-redux'
 
 class LoadingConfirmation extends Component {
-    constructor(props) {
-        super(props);
-        this.unsubscribe = null;
-        this.state = {
-            user: null,
-        };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.unsubscribe = null;
+    //     // this.state = {
+    //     //     user: null,
+    //     // };
+    // }
     componentWillMount() {
         var config = {
             apiKey: "AIzaSyAg-8uXG2MwUhnP1dVaWDNDeGnLaLpeWQ4",
@@ -37,6 +37,11 @@ class LoadingConfirmation extends Component {
                 this.props.navigation.navigate('Register')
             }, 2)
     }
+
+    componentWillUnmount(){
+        StatusBar.setHidden(false);
+    }
+
     render() {
         return (
             <LayoutLoading />

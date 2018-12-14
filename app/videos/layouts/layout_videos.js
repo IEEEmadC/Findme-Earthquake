@@ -1,16 +1,18 @@
 import React from 'react';
 import Videos from '../components/cardvideos'
 import { Container, Content,Header } from 'native-base';
-let id=0
+
+
 function LayoutNews(props) {
     return (
         <Container>
-            <Header
+            {/* <Header
                 style={{backgroundColor:'white'}}
-            ></Header>
+            ></Header> */}
             <Content>
                 {
-                    props.videos.map(item => <Videos key={id++} onPressCard ={props.onPressCardVideo} {...item} />)
+                    props.videos.map(item => <Videos
+                        {...item} />)
                 }
             </Content>
         </Container>

@@ -7,10 +7,10 @@ function NewsTextContent(props) {
     
     return (
         <Content>
-            <Text style={styles.textTitle}>{props.title}</Text>
+            <Text >{props.title}</Text>
             {
                 props.content.map( index => 
-                    <Text style={styles.textBody}>{index}</Text>
+                    <Text >{index}</Text>
                 )
             }
 

@@ -11,16 +11,6 @@ import Profile from '../profile/containers/container_profile';
 
 const HomeTab = createMaterialTopTabNavigator(
   {
-    // Profile:{
-    //   screen: Profile,
-    //   params: { banner: 'Home Screen' },
-    //   navigationOptions :{
-    //     title: "kkkk",
-    //     tabBarIcon: ({tintColor})=>
-    //      (<Icon type="Entypo" name="fingerprint" style={{fontSize: 20,color: tintColor}}/>)
-    //   },
-
-    // },
     News: {
       screen: NewsScreen,
       navigationOptions: {
@@ -37,17 +27,15 @@ const HomeTab = createMaterialTopTabNavigator(
       },
 
     },
-    // Map:{
-    //   screen: MapScreen,
-    //   navigationOptions :{
-    //     tabBarIcon: ({tintColor})=>
-    //      (<Icon type="Entypo" name="map" style={{fontSize: 20, color: tintColor}}/>)
-    //   },
+    Map:{
+      screen: MapScreen,
+      navigationOptions :{
+        tabBarIcon: ({tintColor})=>
+         (<Icon type="Entypo" name="map" style={{fontSize: 20, color: tintColor}}/>)
+      },
 
-    // },
+    },
 
-    //VideosScreen,
-    // MapScreen,
   }, {
     tabBarPosition: 'bottom',
     tabBarOptions: {
@@ -80,4 +68,3 @@ const HomeScreenRoute = DrawerNavigator(
   }
 );
 export default HomeScreenRoute;
-// export default HomeTab;

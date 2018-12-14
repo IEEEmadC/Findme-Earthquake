@@ -15,20 +15,20 @@ const styles = StyleSheet.create({
         paddingTop:20,
         textAlign: 'center',
         fontWeight: 'normal',
-        fontSize: dimens.fontSize_body1*1.2,
+        fontSize: dimens.fontSize_body1,
         color: colors.SECONDARY_TEXT
     },
     textInfo:{
         paddingTop:20,
         textAlign: 'center',
         fontWeight: 'normal',
-        fontSize: dimens.fontSize_subhead*1.2,
+        fontSize: dimens.fontSize_subhead,
         color: colors.SECONDARY_TEXT
     },
     textInput:{
         textAlign:'center',
         fontWeight: 'bold',
-        fontSize: dimens.fontSize_title*1.2,
+        fontSize: dimens.fontSize_title,
     },
     buttonStyle:{
         margin:20,

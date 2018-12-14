@@ -1,60 +1,48 @@
 import React, { Component } from 'react';
-// import Navigator from './register/containers/registerNavigator'
-import {store, persistor} from './store';
-import FirebaseData from './resources/data/firebaseData'
-import YoutubeSearch from './resources/data/youtubeSearch'
-import { Provider, connect } from 'react-redux';
+import { store, persistor } from './store';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Text } from 'native-base';
+import FirebaseData from './resources/data/firebaseData';
+import YoutubeSearch from './resources/data/youtubeSearch';
+import AppNavigatorWithState from './app/navigation/app-navigator-with-state';
 
-//import Alert from './modalExample';
-import Alert from './app/news/containers/container_news';
-import data from './resources/data/object';
 
-import TabNavigator from './app/navigation/profile-navigation'
-import AppNavigatorWithState from './app/navigation/app-navigator-with-state'
-import { PersistGate } from 'redux-persist/integration/react'
-import {Text} from 'native-base'
-// const AppTab = reduxifyNavigator(TabNavigator, "root");
 
-// const mapStateToProps = (state) => ({
-//     state: state.nav,
-// });
 
-// const AppWithNavigationState = connect(mapStateToProps)(AppTab);
 
 
 
 
 class App extends Component {
-  
-  
+
+
   // async componentDidMount() {
   //   const v = await FirebaseData.getVideo();
   //   const y = await YoutubeSearch.getvideo(v);
-  //   const article= await FirebaseData.getArticles();
+  //   const article = await FirebaseData.getArticles();
   //   console.log(v);
   //   console.log(y);
-    
-    
+
+
   //   // const pins= await 
   //   // FirebaseData.getPinsMaps(this.ojalaFuncione);
   //   // console.log(Object.values(pins));
-   
+
   //   store.dispatch({
   //     type: 'GET_VIDEOS',
-  //     payload:{
+  //     payload: {
   //       videos: y
   //     }
   //   })
   //   store.dispatch({
   //     type: 'GET_ARTICLES',
-  //     payload:{
+  //     payload: {
   //       articles: article
   //     }
   //   })
   // }
-  
-  
-  
+
   // ojalaFuncione =(valor )=>{
   //   // console.log(valor);
   //   // store.dispatch({
@@ -69,20 +57,15 @@ class App extends Component {
     return (
       <Provider
         store={store}>
-        <PersistGate loading={<Text>Cargando...</Text>} persistor={persistor}>
-          <AppNavigatorWithState/>
+        <PersistGate
+          loading={<Text>Cargando...</Text>}
+          persistor={persistor}
+        >
+          <AppNavigatorWithState />
         </PersistGate>
       </Provider>
     )
   }
-  
-  
-  // render() {
-  //   return (
-  //     <TabNavigator/>
-  //   )
-  // }
-
 }
 
 export default App;

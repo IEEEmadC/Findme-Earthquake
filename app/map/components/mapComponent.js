@@ -10,12 +10,11 @@ function MapContainer(props) {
       style={{...StyleSheet.absoluteFillObject}} 
       onPress={props.onPressMap}
       initialRegion={{
-        latitude: props.latitude,
-        longitude: props.longitude,
-        latitudeDelta: props.latitudeDelta,
-        longitudeDelta: props.longitudeDelta,
+        latitude: props.latitude ? props.latitude: 37.78825,
+        longitude: props.longitude? props.longitude : -122.4324,
+        latitudeDelta: props.latitudeDelta?  props.latitudeDelta: 0.0922,
+        longitudeDelta: props.longitudeDelta? props.longitudeDelta:0.0421,
       }}
-      
       onRegionChangeComplete={props.onRegionChangeComplete} 
       region={props.region} 
     >
