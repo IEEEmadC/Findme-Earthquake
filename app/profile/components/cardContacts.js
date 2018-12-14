@@ -38,7 +38,7 @@ class CardContacs extends Component {
                             style={{ paddingLeft: 16 }}
                         >
                             <Text>{this.props.name}</Text>
-                            <Text>{this.props.number}</Text>
+                            <Text>{this.props.phone}</Text>
                         </Body>
                         <Right>
                             <Button transparent onPress={() => {

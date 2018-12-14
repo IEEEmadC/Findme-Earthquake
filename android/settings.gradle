@@ -1,4 +1,6 @@
 rootProject.name = 'RondaVillavicencioFindmeEarthquakeApp'
+include ':react-native-contacts-wrapper'
+project(':react-native-contacts-wrapper').projectDir = new File(settingsDir, '../node_modules/react-native-contacts-wrapper/android/app')
 include ':react-native-image-picker'
 project(':react-native-image-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-picker/android')
 // include ':react-native-maps'

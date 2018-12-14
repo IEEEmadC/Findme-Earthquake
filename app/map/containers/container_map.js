@@ -108,6 +108,6 @@ class MapScreen extends React.Component {
         );
     }
 }
-export default MapScreen;
+// export default MapScreen;
 
-// export default connect(mapStateToProps)(MapScreen)
+export default connect(mapStateToProps)(MapScreen)

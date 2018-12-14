@@ -32,7 +32,9 @@ class InformationUser extends Component {
               }
             }
           })   
-          this.props.navigation.navigate('DowloadingData')
+        //   this.props.navigation.navigate('DowloadingData')
+        this.props.navigation.navigate('AddContacts')
+
     }
     onPressButton = () => {
         Alert.alert('Aviso', 'Se guardaran tus datos, ¿Estás de acuerdo?', [

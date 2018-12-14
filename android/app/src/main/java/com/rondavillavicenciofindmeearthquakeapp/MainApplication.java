@@ -3,6 +3,7 @@ package com.rondavillavicenciofindmeearthquakeapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.lynxit.contactswrapper.ContactsWrapperPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import io.invertase.firebase.RNFirebasePackage;
@@ -29,6 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ContactsWrapperPackage(),
             new ImagePickerPackage(),
             new MapsPackage(),
             new RNFirebasePackage(),

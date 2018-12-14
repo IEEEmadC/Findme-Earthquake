@@ -55,7 +55,7 @@ function ProfileModal(props) {
                         </CardItem>
                         <CardItem>
                             <Item >
-                                <Input placeholder={props.number}
+                                <Input placeholder={props.phone}
                                     ></Input>
                             </Item>
                         </CardItem>

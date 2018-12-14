@@ -5,7 +5,7 @@ import Home from '../../app/navigation/tab';
 import Loading from '../../loading/container/loading_container'
 import InformationUser from './registerContainerInformationUser'
 import DowloadingData from './dowloadingData';
-
+import AddContacts from '../containers/registercontainer_addContacts'
 
 
 const AuthStack = createStackNavigator({
@@ -26,6 +26,12 @@ const AuthStack = createStackNavigator({
     screen: InformationUser,
     navigationOptions:()=>({
       title:"Agrega tus datos"
+    })
+  },
+  AddContacts:{
+    screen: AddContacts,
+    navigationOptions:()=>({
+      title:"Agrega tus contactos"
     })
   },
   DowloadingData:{
