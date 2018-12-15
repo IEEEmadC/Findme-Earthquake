@@ -8,8 +8,6 @@ Regrettably, this project is still being developed. However, If you  If you want
 
 Download here: https://drive.google.com/open?id=1-v-6whGW2bpcGnchrdy8XG8mPMjYneo2
 
-##Screenshots
-
 
 ![001](https://user-images.githubusercontent.com/42586480/50040466-cae59b80-0011-11e9-87f8-b29a7c58d03b.gif)
 ![002](https://user-images.githubusercontent.com/42586480/50040478-01bbb180-0012-11e9-98a4-58027baee480.gif)
