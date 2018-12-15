@@ -3,12 +3,14 @@ package com.rondavillavicenciofindmeearthquakeapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import org.pweitz.reactnative.locationswitch.LocationSwitchPackage;
 import com.lynxit.contactswrapper.ContactsWrapperPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.auth.RNFirebaseAuthPackage;
 import io.invertase.firebase.database.RNFirebaseDatabasePackage;
+import io.invertase.firebase.storage.RNFirebaseStoragePackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -30,12 +32,14 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new LocationSwitchPackage(),
             new ContactsWrapperPackage(),
             new ImagePickerPackage(),
             new MapsPackage(),
             new RNFirebasePackage(),
             new RNFirebaseDatabasePackage(),
-            new RNFirebaseAuthPackage()
+            new RNFirebaseAuthPackage(),
+            new RNFirebaseStoragePackage()
       );
     }
 

@@ -55,6 +55,7 @@
 		55DA6CB235FB48CF88AB5522 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4ABD76F6C884119800DA14C /* Zocial.ttf */; };
 		EE0E00BC57814F098F19CA7E /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C7583CD4FB44FCB1AC2AD1 /* libRNImagePicker.a */; };
 		D86403EEEE684F608C0970EA /* libRCTContactsWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C730FDC016F34C80A3F67639 /* libRCTContactsWrapper.a */; };
+		F4FF233828E14675BB6A6975 /* libRNReactNativeLocationSwitch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7361913560CC4F2F809B99A6 /* libRNReactNativeLocationSwitch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,6 +383,8 @@
 		A1C7583CD4FB44FCB1AC2AD1 /* libRNImagePicker.a */ = {isa = PBXFileReference; name = "libRNImagePicker.a"; path = "libRNImagePicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		77E16E1DD97E4777907D75E6 /* ContactsWrapper.xcodeproj */ = {isa = PBXFileReference; name = "ContactsWrapper.xcodeproj"; path = "../node_modules/react-native-contacts-wrapper/ios/ContactsWrapper.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		C730FDC016F34C80A3F67639 /* libRCTContactsWrapper.a */ = {isa = PBXFileReference; name = "libRCTContactsWrapper.a"; path = "libRCTContactsWrapper.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		4BE9BDD3C1CE4925826D9001 /* RNReactNativeLocationSwitch.xcodeproj */ = {isa = PBXFileReference; name = "RNReactNativeLocationSwitch.xcodeproj"; path = "../node_modules/react-native-location-switch/ios/RNReactNativeLocationSwitch.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		7361913560CC4F2F809B99A6 /* libRNReactNativeLocationSwitch.a */ = {isa = PBXFileReference; name = "libRNReactNativeLocationSwitch.a"; path = "libRNReactNativeLocationSwitch.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +416,7 @@
 				5CAE490377D14EA381AA395C /* libAirMaps.a in Frameworks */,
 				EE0E00BC57814F098F19CA7E /* libRNImagePicker.a in Frameworks */,
 				D86403EEEE684F608C0970EA /* libRCTContactsWrapper.a in Frameworks */,
+				F4FF233828E14675BB6A6975 /* libRNReactNativeLocationSwitch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +607,7 @@
 				0FFAE9DEB6314E348AB5B69C /* AirMaps.xcodeproj */,
 				65798E9CCF614BE1BFBFEDBF /* RNImagePicker.xcodeproj */,
 				77E16E1DD97E4777907D75E6 /* ContactsWrapper.xcodeproj */,
+				4BE9BDD3C1CE4925826D9001 /* RNReactNativeLocationSwitch.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1271,6 +1276,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1278,6 +1284,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
 					"$(SRCROOT)\..\node_modules\react-native-contacts-wrapper\ios\RCTContactsWrapper",
+					"$(SRCROOT)\..\node_modules\react-native-location-switch\ios",
 				);
 			};
 			name = Debug;
@@ -1303,6 +1310,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1310,6 +1318,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
 					"$(SRCROOT)\..\node_modules\react-native-contacts-wrapper\ios\RCTContactsWrapper",
+					"$(SRCROOT)\..\node_modules\react-native-location-switch\ios",
 				);
 			};
 			name = Release;
@@ -1336,6 +1345,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
 					"$(SRCROOT)\..\node_modules\react-native-contacts-wrapper\ios\RCTContactsWrapper",
+					"$(SRCROOT)\..\node_modules\react-native-location-switch\ios",
 				);
 			};
 			name = Debug;
@@ -1361,6 +1371,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
 					"$(SRCROOT)\..\node_modules\react-native-contacts-wrapper\ios\RCTContactsWrapper",
+					"$(SRCROOT)\..\node_modules\react-native-location-switch\ios",
 				);
 			};
 			name = Release;
@@ -1394,6 +1405,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1401,6 +1413,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
 					"$(SRCROOT)\..\node_modules\react-native-contacts-wrapper\ios\RCTContactsWrapper",
+					"$(SRCROOT)\..\node_modules\react-native-location-switch\ios",
 				);
 			};
 			name = Debug;
@@ -1434,6 +1447,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1441,6 +1455,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
 					"$(SRCROOT)\..\node_modules\react-native-contacts-wrapper\ios\RCTContactsWrapper",
+					"$(SRCROOT)\..\node_modules\react-native-location-switch\ios",
 				);
 			};
 			name = Release;
@@ -1473,6 +1488,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1480,6 +1496,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
 					"$(SRCROOT)\..\node_modules\react-native-contacts-wrapper\ios\RCTContactsWrapper",
+					"$(SRCROOT)\..\node_modules\react-native-location-switch\ios",
 				);
 			};
 			name = Debug;
@@ -1512,6 +1529,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1519,6 +1537,7 @@
 					"$(SRCROOT)\..\node_modules\react-native-maps\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-image-picker\ios",
 					"$(SRCROOT)\..\node_modules\react-native-contacts-wrapper\ios\RCTContactsWrapper",
+					"$(SRCROOT)\..\node_modules\react-native-location-switch\ios",
 				);
 			};
 			name = Release;

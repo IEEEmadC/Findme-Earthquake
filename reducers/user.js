@@ -2,7 +2,8 @@ const initialState ={
     user:{
         name:null,
         phoneNumber:null,
-        image:null
+        image:null,
+        uid:null
     }
 }
 

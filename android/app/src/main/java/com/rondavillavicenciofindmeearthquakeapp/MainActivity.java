@@ -1,7 +1,8 @@
 package com.rondavillavicenciofindmeearthquakeapp;
 
 import com.facebook.react.ReactActivity;
-
+import org.pweitz.reactnative.locationswitch.LocationSwitch;
+import android.content.Intent;
 public class MainActivity extends ReactActivity {
 
     /**
@@ -11,5 +12,10 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "RondaVillavicencioFindmeEarthquakeApp";
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        LocationSwitch.getInstance().onActivityResult(requestCode, resultCode);
     }
 }

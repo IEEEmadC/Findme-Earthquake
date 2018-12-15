@@ -21,6 +21,12 @@ function LayoutAddContacts(props) {
                     onPress={props.onPressNext}
                     style={styles.buttonStyle}
                 ><Text> Siguiente </Text></Button>
+                <Button
+                    block
+                    onPress={props.onPressGPS}
+                    style={styles.buttonStyle}
+                ><Text> Activar GPS </Text></Button>
+                
             </Content>
 
 

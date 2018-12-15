@@ -10,7 +10,8 @@ class AnatomyExample extends Component {
     this.state = {
       user: null,
       codeInput: '',
-      phoneNumber: null
+      phoneNumber: null,
+      uid:''
     };
   }
 
@@ -20,17 +21,19 @@ class AnatomyExample extends Component {
     if (confirmResult && codeInput.length) {
       confirmResult.confirm(codeInput)
         .then((user) => {
-          console.log("usuario auth su telefono es: ")    
-          console.log(user._user.phoneNumber);
+          console.log("datos del usuario desde firebase")    
+          console.log(user);
           this.setState({
-            phoneNumber:user._user.phoneNumber
+            phoneNumber:user._user.phoneNumber,
+            uid: user._user.uid
           })
-          console.log(this.state.phoneNumber);
+          console.log(this.state.uid);
           store.dispatch({
             type: 'SET_USER',
             payload:{
               user: {
-                phoneNumber: this.state.phoneNumber
+                phoneNumber: this.state.phoneNumber,
+                uid: this.state.uid
               }
             }
           })

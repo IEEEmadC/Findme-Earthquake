@@ -13,6 +13,7 @@
     "react-native-contacts-wrapper": "^0.2.4",
     "react-native-firebase": "^5.1.0",
     "react-native-image-picker": "^0.27.1",
+    "react-native-location-switch": "^0.1.0",
     "react-native-maps": "^0.22.0",
     "react-native-parallax-header": "^1.0.6",
     "react-native-select-contact": "^1.1.1",

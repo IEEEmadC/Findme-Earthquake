@@ -4,7 +4,6 @@ import { Container, Content, Button, Icon, Input, Body, Text, View, Item, Card, 
 import Avatar from '../../app/components/Avart'
 
 import styles from '../style/index'
-const screen = Dimensions.get('window');
 
 function layoutInformationUser(props) {
     return (
@@ -13,10 +12,11 @@ function layoutInformationUser(props) {
                 style={{ padding: 16 }}
             >
                 <Avatar
-                    big source={{ uri: 'https://media.aweita.larepublica.pe/678x508/aweita/imagen/2018/02/08/noticia-persona-positiva.png' }}
+                    big source={{ uri: props.url }}
                 />
                 <Button
                     iconLeft
+                    onPress={props.onPressAddImage}
                     style={{
                         position: 'absolute',
                         marginTop: 110,
@@ -27,9 +27,7 @@ function layoutInformationUser(props) {
                         paddingBottom: 0,
                         borderRadius: 20
 
-                    }}
-                // onPress={this.onPressButton}
-                >
+                    }}>
                     <Icon type="Entypo" name="camera"
                         style={{ marginLeft: 10, fontSize: 20 }}
                     />
