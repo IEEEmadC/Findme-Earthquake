@@ -1,12 +1,12 @@
 import React from 'react';
-import { DrawerNavigator, createMaterialTopTabNavigator } from 'react-navigation';
+import { DrawerNavigator, createMaterialTopTabNavigator,createStackNavigator } from 'react-navigation';
 import { Icon } from 'native-base'
 import MapScreen from '../map/layouts/layout_map';
 import SideBar from '../sidebar/layout/layout';
 import NewsScreen from '../news/containers/container_news'
 import VideosScreen from '../videos/containers/container_videos'
 import Profile from '../profile/containers/container_profile';
-
+import ModalVideoScreen from '../videos/containers/modalVideo'
 
 
 const HomeTab = createMaterialTopTabNavigator(
@@ -50,11 +50,29 @@ const HomeTab = createMaterialTopTabNavigator(
   }
 );
 
+const stackVideos = createStackNavigator({
+
+  Main: HomeTab,
+  ModalVideo: ModalVideoScreen
+},
+{
+  mode: 'modal',
+  headerMode: 'none',
+  cardStyle: {
+    backgroundColor: 'white'
+  },
+  navigationOptions: {
+    gesturesEnabled: true,
+  }
+}
+
+)
+
 
 const HomeScreenRoute = DrawerNavigator(
   {
     Home: {
-      screen: HomeTab,
+      screen: stackVideos,
     },
     Profile: {
       screen: Profile,
