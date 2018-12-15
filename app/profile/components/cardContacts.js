@@ -5,7 +5,7 @@ import Swipeout from 'react-native-swipeout';
 import Avatar from '../../components/Avart'
 import Modal from './profileModal'
 import { connect } from 'react-redux'
-
+import { NavigationActions } from 'react-navigation';
 
 
 class CardContacs extends Component {
@@ -17,8 +17,28 @@ class CardContacs extends Component {
         this.setState({ modalVisible: visible });
     }
 
-    render() {
 
+
+    onPressButton = ()=>{
+
+        // this.props.dispatch({
+        //     type: 'SET_SELECT_VIDEO',
+        //     payload: {
+        //         selectedVideo: this.props,
+        //     }
+        // })
+
+        console.log('Navega');
+        
+
+        this.props.dispatch(
+            NavigationActions.navigate({
+              routeName: 'ModalContact'
+        }))    
+
+    }
+
+    render() {
 
         const swipeSettings = {
             autoClose: true,
@@ -39,17 +59,14 @@ class CardContacs extends Component {
                                         this.props.dispatch({
                                             type: 'SET_CONTACT',
                                             payload: {
-                                                index: this.props.index,
+                                                contacts: contactsAux,
                                             }
                                         })
-                                        this.props.navigator.navigate()
-                                        // this.props.dispatch({
-                                        //     type: 'DELETE_CONTACT',
-                                        //     payload: {
-                                        //         index: this.props.index,
-                                        //     }
-                                        // })
-
+                                        this.props.dispatch(
+                                            NavigationActions.navigate({
+                                              routeName: 'Home'
+                                        }))    
+                                        
                                         alert('Se elimino Prr');
                                     }
                                 },
@@ -62,8 +79,6 @@ class CardContacs extends Component {
                 }
             ]
         }
-
-
 
         return (
             <Content>
@@ -91,10 +106,7 @@ class CardContacs extends Component {
                             <Text>{this.props.phone}</Text>
                         </Body>
                         <Right>
-                            <Button transparent onPress={() => {
-                                alert("Presionado");
-                                this.setModalVisible(true);
-                            }}>
+                            <Button transparent onPress={this.onPressButton}>
                                 <Icon type='Entypo' name="edit" />
                             </Button>
                         </Right>
