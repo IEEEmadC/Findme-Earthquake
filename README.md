@@ -5,7 +5,7 @@ A posible solutions to find people in a natural disaster such as earthquake. The
 ## This project is still being developed
 
 Regrettably, this project is still being developed. However, If you  If you want to try its features. Install the next apk.
-
+![alt text](https://giphy.com/gifs/C8IN6DMynOEEFHUblt)
 ### Credential for test 
 Country: Ecuador 
 PhoneNumber: 0960520623 or 0987868889
