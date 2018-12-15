@@ -7,7 +7,7 @@ import NewsScreen from '../news/containers/container_news'
 import VideosScreen from '../videos/containers/container_videos'
 import Profile from '../profile/containers/container_profile';
 import ModalVideoScreen from '../videos/containers/modalVideo'
-
+import Contact from '../profile/components/profileEdit';
 
 const HomeTab = createMaterialTopTabNavigator(
   {
@@ -69,13 +69,26 @@ const stackVideos = createStackNavigator({
 )
 
 
+const ProfileNav = createStackNavigator(
+  {
+      Profile: {
+          screen: Profile,
+      },
+      ModalContact:{
+        screen: Contact
+      }
+
+  }
+)
+
+
 const HomeScreenRoute = DrawerNavigator(
   {
     Home: {
       screen: stackVideos,
     },
     Profile: {
-      screen: Profile,
+      screen: ProfileNav,
       navigationOptions: {
         title: "Editar perfil"
       }

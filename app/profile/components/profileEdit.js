@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, Dimensions, StatusBar, Alert, Modal } from 'react-native'
 import { Container, Content, Button, Icon, Input, Body, Text, View, Item, Card, CardItem } from 'native-base';
-import Avatar from '../../components/Avart'
+import Avatar from '../../components/Avart';
+import {connect} from 'react-redux'
+
+
 const screen = Dimensions.get('window');
 const options = {
     title: 'Seleccionar Foto',
@@ -83,4 +86,12 @@ const styles = StyleSheet.create({
 
     }
 });
-export default ProfileModal;
+
+function mapStateToProps( state){
+
+    return({
+        state
+    })
+}
+
+export default connect(mapStateToProps)  (ProfileModal);
