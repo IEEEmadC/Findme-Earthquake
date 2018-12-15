@@ -17,11 +17,11 @@ function LayoutNewsDetail(props) {
         return (
 
             <Content padder
-             style={{ color: colors.SECONDARY_TEXT, fontSize: dimens.fontSize_body1 }}
+                style={{ color: colors.SECONDARY_TEXT, fontSize: dimens.fontSize_body1 }}
             >
-                <Text
+                {/* <Text
                     style={styles.textTitle}> {props.title}
-                </Text>
+                </Text> */}
                 {
                     props.content.map((item) => {
 
@@ -37,13 +37,13 @@ function LayoutNewsDetail(props) {
                                         title={item.title}>
                                     </NewsListItem>
                                 )
-                            // case 'checkList':
-                            //     return (
-                            //         <NewsCheckList
-                            //             content={item.content}
-                            //             title={item.title}
-                            //         />
-                            //     )
+                            case 'checkList':
+                                return (
+                                    <NewsCheckList
+                                        content={item.content}
+                                        title={item.title}
+                                    />
+                                )
                         }
                     })
                 }
@@ -53,15 +53,15 @@ function LayoutNewsDetail(props) {
 
     renderNavBar = () => {
         return (
-            <Header  style={{paddingTop:0,height:56,backgroundColor:'red'}} >
+            <Header style={{ paddingTop: 0, height: 56, backgroundColor: 'red' }} >
 
                 <Left>
                     <Button transparent>
                         <Icon name="arrow-back" />
                     </Button>
                 </Left>
-                <Body style={{ flex:2}}>
-                    <Title style={{textAlign:'left'}}>{props.title}</Title>
+                <Body style={{ flex: 2 }}>
+                    <Title style={{ textAlign: 'left' }}>{props.title}</Title>
                 </Body>
                 <Right></Right>
             </Header>

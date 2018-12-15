@@ -3,54 +3,31 @@ import { Card, CardItem, View, Text, Content,Left,Body } from 'native-base';
 import { Image, TouchableOpacity, Modal, WebView, StyleSheet, Dimensions, StatusBar } from 'react-native';
 import styles from '../styles/index'
 const screen = Dimensions.get('window');
+import { NavigationActions } from 'react-navigation';
+import { connect } from 'react-redux';
+
 class CardVideo extends Component {
 
-    ////////////////
-    constructor(props) {
-        super(props);
-        this.state = {
-            modalVisible: false,
-            uri: ''
-        };
-    }
-    setModalVisible(visible) {
-        this.setState({ modalVisible: visible });
-    }
-    rendermodal() {
-        return (
-            <Modal
-                animationType="slide"
-                transparent={false}
-                onOrientationChange='landscape'
-                visible={this.state.modalVisible}
-                onRequestClose={() => {
-                    this.setModalVisible(false);
-                }}>
-                <WebView
-                    style={{ flex: 1 }}
-                    javaScriptEnabled={true}
-                    domStorageEnabled={true}
-                    source={{ uri: this.state.uri }}
-                />
-            </Modal>
-        )
-    }
-    ///////////////////////////
+    onPress = () =>{
 
-    onP = (event) => {
-        this.props.onPressCard(this.props)
-        this.setState({
-            uri: 'https://www.youtube.com/embed/' + this.props.id.videoId,
-            modalVisible: !this.state.modalVisible
+        this.props.dispatch({
+            type: 'SET_SELECT_VIDEO',
+            payload: {
+                selectedVideo: this.props,
+            }
         })
-    }
 
+        this.props.dispatch(
+            NavigationActions.navigate({
+              routeName: 'ModalVideo'
+        }))    
+    }
+    
     render() {
         return (
             <Content>
-                {this.rendermodal()}
                 <Card transparent>
-                    <TouchableOpacity onPress={this.onP}>
+                    <TouchableOpacity onPress={this.onPress}>
                         <CardItem cardBody>
                             <Left>
                                 <Image
@@ -71,4 +48,4 @@ class CardVideo extends Component {
     }
 }
 
-export default CardVideo;
+export default connect (null) (CardVideo);

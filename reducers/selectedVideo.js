@@ -1,10 +1,10 @@
 const initialState ={
-    articles:[],
+    selectedVideo:[]
 }
 
-function articles(state = initialState, action) {
+function selectedVideo(state = initialState, action) {
     switch (action.type) {
-        case 'GET_ARTICLES': {
+        case 'SET_SELECT_VIDEO': {
             return { ...state, ...action.payload }
         }
         default: {
@@ -13,4 +13,4 @@ function articles(state = initialState, action) {
     }
 }
 
-export default articles;
+export default selectedVideo;
