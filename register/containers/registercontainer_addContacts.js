@@ -7,15 +7,13 @@ import { connect } from 'react-redux'
 import { store } from '../../store'
 import LocationSwitch from 'react-native-location-switch';
 import firebase from 'react-native-firebase';
+
 class RegisterContainer extends Component {
     state = {
-        contacts: []
+        contacts: [],
+        locationEnabled: false
     }
-    constructor(props) {
-        super(props);
-
-        this.state = { locationEnabled: false };
-    }
+    
     async componentWillMount() {
         try {
             const granted = await PermissionsAndroid.request(
@@ -58,8 +56,8 @@ class RegisterContainer extends Component {
                 contacts: this.state.contacts
             }
         })
-        this.onGPS();
-        this.uploadImages(uid,uriImage);
+        // this.onGPS();
+        // this.uploadImages(uid, uriImage);
         this.props.navigation.navigate('DowloadingData')
     }
     onGPS = () => {
@@ -67,29 +65,9 @@ class RegisterContainer extends Component {
         LocationSwitch.enableLocationService(1000, true,
             () => { this.setState({ locationEnabled: true }); },
             () => { this.setState({ locationEnabled: false }); },
-          );
-        
-    }
-    uploadImages(uid,uriImage){
-        firebase.storage().ref('users/' + uid + "/user").putFile(uriImage).then(uploadedFile => {
-            console.log(uploadedFile);
-        })
-            .catch(err => {
-                console.log("Error: " + error);
+        );
 
-            });
-        if(this.state.contacts.length >0){
-            this.state.contacts.map((contact, index) => {
-                firebase.storage().ref('users/' + uid + "/contact" + index).putFile(contact.image).then(uploadedFile => {
-                    console.log(uploadedFile);
-                }).catch(error => {
-                    console.log("Error: " + error);
-    
-                });
-            })
-        }
     }
-
     render() {
         return (
             <Layout
@@ -97,9 +75,15 @@ class RegisterContainer extends Component {
                 onPressNext={this.onPressNext}
                 onPressGPS={() => this.onPressGPS(this.props.user.uid, this.props.user.image)}
             >
-                {this.state.contacts && this.state.contacts.map((contact) => {
-                    return (<CardContact  {...contact}></CardContact>)
-                })}
+
+
+                {
+                    this.state.contacts.map((contact) => {
+                        return (<CardContact  {...contact}></CardContact>)
+                    })
+                }
+
+
             </Layout>
 
         );

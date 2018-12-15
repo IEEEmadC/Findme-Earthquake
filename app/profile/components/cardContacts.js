@@ -21,12 +21,12 @@ class CardContacs extends Component {
 
     onPressButton = ()=>{
 
-        // this.props.dispatch({
-        //     type: 'SET_SELECT_VIDEO',
-        //     payload: {
-        //         selectedVideo: this.props,
-        //     }
-        // })
+        this.props.dispatch({
+            type: 'SET_SELECT_CONTACT',
+            payload: {
+                selectedContact: this.props,
+            }
+        })
 
         console.log('Navega');
         

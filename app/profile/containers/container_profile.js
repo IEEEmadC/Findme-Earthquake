@@ -21,8 +21,6 @@ const url = 'https://media.aweita.larepublica.pe/678x508/aweita/imagen/2018/02/0
 
 class ProfileComponent extends Component {
    
-
-   
     render() {
 
         return (

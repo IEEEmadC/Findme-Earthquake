@@ -21,24 +21,6 @@ class LayoutProfile extends Component {
                             big source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
                             onPress={this.props.onPressImage}
                         >
-
-                            <Button
-                                style={{
-                                    position: 'absolute',
-                                    marginTop: 100,
-                                    marginLeft: 100,
-                                    width: 52,
-                                    height: 52,
-                                    paddingTop: 0,
-                                    paddingBottom: 0,
-                                    borderRadius: 26
-
-                                }}
-                                onPress={this.props.onPressButton}>
-                                <Icon type="Entypo" name="camera"
-                                    style={{fontSize: 20 }}
-                                />
-                            </Button>
                         </Avatar>
                         <Text>Nombre de Usuario </Text>
                         <Text

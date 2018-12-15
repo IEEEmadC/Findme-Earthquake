@@ -26,6 +26,26 @@ class FirebaseData {
             }
         );
     }
+    static uploadImages(uid, uriImage) {
+        firebase.storage().ref('users/' + uid + "/user").putFile(uriImage).then(uploadedFile => {
+            console.log(uploadedFile);
+        })
+            .catch(err => {
+                console.log("Error: " + error);
 
+            });
+    }
+    // static uploadImagesContact(contacts){
+    //     if (contacts.length > 0) {
+    //         contacts.map((contact, index) => {
+    //             firebase.storage().ref('users/' + uid + "/contact" + index).putFile(contact.image).then(uploadedFile => {
+    //                 console.log(uploadedFile);
+    //             }).catch(error => {
+    //                 console.log("Error: " + error);
+
+    //             });
+    //         })
+    //     }
+    // }
 }
 module.exports = FirebaseData;

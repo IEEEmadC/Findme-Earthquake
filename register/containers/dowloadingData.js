@@ -6,15 +6,13 @@ import YoutubeSearch from '../../resources/data/youtubeSearch';
 import { store } from '../../store';
 
 class DowloadingData extends Component {
-
-
     async componentDidMount() {
         console.log('descargando');
 
         const v = await FirebaseData.getVideo();
         const y = await YoutubeSearch.getvideo(v);
         const article = await FirebaseData.getArticles();
-        // const pins = await FirebaseData.getPinsMaps(this.dispatchPins);
+        FirebaseData.getPinsMaps(this.dispatchPins);
         // console.log(Object.values(pins));
 
         store.dispatch({
@@ -31,27 +29,19 @@ class DowloadingData extends Component {
         })
         console.log(y);
         console.log(article);
-
-        // try {
-        //     const granted = await PermissionsAndroid.request(
-        //         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-        //     )
-        // } catch (err) {
-        //     console.warn(err)
-        // }
         this.props.navigation.navigate('App')
 
 
     }
-    // dispatchPins = (valor) => {
-    //     console.log(valor);
-    //     store.dispatch({
-    //         type: 'GET_PIN_MAPS',
-    //         payload: {
-    //             pins: valor
-    //         }
-    //     })
-    // }
+    dispatchPins = (valor) => {
+        console.log(valor);
+        store.dispatch({
+            type: 'GET_PIN_MAPS',
+            payload: {
+                pins: valor
+            }
+        })
+    }
 
     render() {
 

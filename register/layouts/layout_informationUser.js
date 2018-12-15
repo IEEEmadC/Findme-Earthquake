@@ -14,24 +14,6 @@ function layoutInformationUser(props) {
                 <Avatar
                     big source={{ uri: props.url }}
                 />
-                <Button
-                    iconLeft
-                    onPress={props.onPressAddImage}
-                    style={{
-                        position: 'absolute',
-                        marginTop: 110,
-                        marginLeft: 110,
-                        width: 40,
-                        height: 40,
-                        paddingTop: 0,
-                        paddingBottom: 0,
-                        borderRadius: 20
-
-                    }}>
-                    <Icon type="Entypo" name="camera"
-                        style={{ marginLeft: 10, fontSize: 20 }}
-                    />
-                </Button>
                 <Text>Tu Nombre: </Text>
                 <Input
                     placeholder="Ingresa tu nombre aqui"

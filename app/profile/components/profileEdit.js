@@ -14,62 +14,47 @@ const options = {
     },
 };
 
-function ProfileModal(props) {
+class ProfileModal extends Component{
+    onPressEdit(){
+        
+    }
+   render(){
     return (
-            <Content>
-                <Body
-                    style={{ padding: 16 }}
-                >
-                    <Avatar
-                        big source={{ uri: '' }}
-                    />
-                    <Text>{props.name} </Text>
-                    <Button
-                        iconLeft
-                        style={{
-                            position: 'absolute',
-                            marginTop: 110,
-                            marginLeft: 110,
-                            width: 40,
-                            height: 40,
-                            paddingTop: 0,
-                            paddingBottom: 0,
-                            borderRadius: 20
+        <Content>
+            <Body
+                style={{ padding: 16 }}
+            >
+                <Avatar
+                    big source={{ uri: '' }}
+                />
+                <Text>{this.props.contact.name} </Text>
+            </Body>
+            <View>
+                <Card>
+                    <CardItem>
+                        <Text style={styles.textInfo}>Edita el detalle del contacto</Text>
+                    </CardItem>
+                    <CardItem>
+                        <Item >
+                            <Input placeholder={this.props.contact.name}
+                               ></Input>
+                        </Item>
+                    </CardItem>
+                    <CardItem>
+                        <Item >
+                            <Input placeholder={this.props.contact.phone}
+                                ></Input>
+                        </Item>
+                    </CardItem>
+                </Card>
+            </View>
+            <Button block success onPress={this.onPressEdit}>
+                <Text style={styles.textButton}>Editar</Text>
+            </Button>
 
-                        }}
-                        // onPress={this.onPressButton}
-                        >
-                        <Icon type="Entypo" name="camera"
-                            style={{ marginLeft: 10, fontSize: 20 }}
-                        />
-                    </Button>
-
-                </Body>
-                <View>
-                    <Card>
-                        <CardItem>
-                            <Text style={styles.textInfo}>Edita el detalle del contacto</Text>
-                        </CardItem>
-                        <CardItem>
-                            <Item >
-                                <Input placeholder={props.name}
-                                   ></Input>
-                            </Item>
-                        </CardItem>
-                        <CardItem>
-                            <Item >
-                                <Input placeholder={props.phone}
-                                    ></Input>
-                            </Item>
-                        </CardItem>
-                    </Card>
-                </View>
-                <Button block success>
-                    <Text style={styles.textButton}>Editar</Text>
-                </Button>
-
-            </Content>
-    )
+        </Content>
+)
+   }
 }
 
 const styles = StyleSheet.create({
@@ -88,10 +73,11 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps( state){
-
+    console.log(state.selectedVideo.selectedContact);
+    
     return({
-        state
+        contact: state.selectedVideo.selectedContact
     })
 }
 
-export default connect(mapStateToProps)  (ProfileModal);
+export default connect(mapStateToProps)(ProfileModal);

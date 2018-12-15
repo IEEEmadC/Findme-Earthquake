@@ -54,9 +54,9 @@ class MapScreen extends React.Component {
 
 
     render() {
-        // const pinsFood = Object.values(this.props.markers.food);
-        // const pinsSecurity= Object.values(this.props.markers.security);
-        // const pinsStreet= Object.values(this.props.markers.street);
+        const pinsFood = Object.values(this.props.markers.food);
+        const pinsSecurity= Object.values(this.props.markers.security);
+        const pinsStreet= Object.values(this.props.markers.street);
         
         return (
             <Container>
@@ -67,7 +67,7 @@ class MapScreen extends React.Component {
                     longitudeDelta={LONGITUDE_DELTA}
                     onRegionChangeComplete={this.state.active ? this.onRegionChangeComplete : null}
                 >
-                    {/* {pinsFood.map(marker => (
+                    {pinsFood.map(marker => (
                         <Marker
                             coordinate={{
                                 latitude: marker.latitude,
@@ -102,7 +102,7 @@ class MapScreen extends React.Component {
                             pinColor='#FF0000'
                         />
                     ))
-                    } */}
+                    }
                 </MapContainer>
             </Container >
         );

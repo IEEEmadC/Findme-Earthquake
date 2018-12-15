@@ -4,16 +4,9 @@ import { Alert } from 'react-native'
 import firebase from 'react-native-firebase';
 import { store } from '../../store'
 import { connect } from 'react-redux'
-import ImagePicker from 'react-native-image-picker';
 
 
-const options = {
-    title: 'Seleccionar Foto',
-    storageOptions: {
-        skipBackup: true,
-        path: 'images',
-    },
-};
+
 const url = 'https://media.aweita.larepublica.pe/678x508/aweita/imagen/2018/02/08/noticia-persona-positiva.png'
 class InformationUser extends Component {
     constructor(props) {
@@ -54,19 +47,7 @@ class InformationUser extends Component {
             { cancelable: false })
     }
     onPressAddImage = () => {
-        console.log("Presionaste la imagen");
-
-        ImagePicker.showImagePicker(options, (response) => {
-
-            if (response.didCancel) {
-            } else if (response.error) {
-            } else {
-                const source = response.uri;
-                this.setState({
-                    avatarSource: source,
-                });
-            }
-        });
+        
     }
     render() {
         return (
